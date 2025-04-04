@@ -6,7 +6,13 @@
 
 ### Topics
 
-- Advanced Python Features (Asyncio, Decorators, Generators, Context Managers, Typing) - Est. Time: 2 days
+- Advanced Python Features (Est. Time: 2 days)
+  - [OOP](./01-Foundations/01-Advanced-Features/01-OOP/OOP.md)
+  - Asyncio
+  - Decorators
+  - Generators
+  - Context Managers
+  - Typing
 - Git Mastery & Collaboration Flow (Branching strategies, Merging vs. Rebasing, Pull Requests, Code Reviews, GitHub/GitLab) - Est. Time: 2 days
 - Linux Command Line & Environment Management (Essential commands, Permissions, Package managers, Virtual Environments) - Est. Time: 1 day
 
