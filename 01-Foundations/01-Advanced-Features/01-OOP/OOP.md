@@ -61,7 +61,7 @@ my_cat.speak()
 
 - Polymorphism is the ability of objects of different classes to respond to the same method call in different ways.
 - It allows for more flexible and adaptable code.
-- Example: the speak() method in the previous example is a polimorphic method.
+- Example: the `speak()` method in the previous example is a polimorphic method.
 
 ### Abstraction
 
@@ -71,24 +71,24 @@ my_cat.speak()
 
 ## Exercises
 
-1. Create a Class Hierarchy:
+1. Create a Class Hierarchy: [Solution](./Exercises/01.py)
 
    - Design a class hierarchy for different types of vehicles (e.g., Car, Truck, Motorcycle).
    - Include attributes and methods specific to each vehicle type.
    - Include an abstract class called Vehicle, and make the other classes inherit from it.
 
-2. Implement a Bank Account System:
+2. Implement a Bank Account System: [Solution](./Exercises/02.py)
 
    - Create a class called BankAccount with attributes for account number, balance, and owner.
    - Implement methods for depositing, withdrawing, and checking the balance.
    - Create a subclass called SavingsAccount that inherits from BankAccount and adds an interest rate attribute.
 
-3. Design a Shape Class:
+3. Design a Shape Class: [Solution](./Exercises/03.py)
 
    - Create an abstract class called Shape with an abstract method called area().
    - Create subclasses for different shapes (e.g., Circle, Rectangle, Triangle) that implement the area() method.
 
-4. Implement a simple inventory system:
+4. Implement a simple inventory system: [Solution](./Exercises/04.py)
 
    - Create a class called Product, with attributes like name, price, and stock.
    - Create a class called Inventory, that manages a list of Product objects.
