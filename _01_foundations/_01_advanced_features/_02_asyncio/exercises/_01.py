@@ -1,8 +1,8 @@
 """
 Error Handling:
 
-Modify the fetch_url function to handle different HTTP status codes (e.g., 404, 500) and network errors.
-Add a timeout to the fetch_url function to prevent it from waiting indefinitely.
+- Modify the fetch_url function to handle different HTTP status codes (e.g., 404, 500) and network errors.
+- Add a timeout to the fetch_url function to prevent it from waiting indefinitely.
 """
 
 import asyncio
