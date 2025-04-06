@@ -98,22 +98,22 @@ if __name__ == "__main__":
 1. Error Handling:
 
    - Modify the fetch_url function to handle different HTTP status codes (e.g., 404, 500) and network errors.
-   - Add a timeout to the fetch_url function to prevent it from waiting indefinitely.
+   - Add a timeout to the fetch_url function to prevent it from waiting indefinitely. [Solution](./exercises/_01.py)
 
 2. Rate Limiting:
 
    - Implement a rate limiter to prevent making too many requests to a website in a short period of time.
 
-   - Use asyncio.sleep() to control the rate of requests.
+   - Use asyncio.sleep() to control the rate of requests. [Solution](./exercises/_02.py)
 
 3. Progress Tracking:
 
    - Add progress tracking to the download_image function to display the download progress.
-   - You can get the content length from the response headers.
+   - You can get the content length from the response headers. [Solution](./exercises/_03.py)
 
 4. Concurrent File Processing:
 
-   - Create a async application that reads multiple files concurrently, process their content, and write the results to new files.
+   - Create a async application that reads multiple files concurrently, process their content, and write the results to new files. [Solution](./exercises/_04.py)
 
 5. Web scraping:
-   - Create a simple web scraping application that fetches data from multiple web pages concurrently.
+   - Create a simple web scraping application that fetches data from multiple web pages concurrently. [Solution](./exercises/_05.py)

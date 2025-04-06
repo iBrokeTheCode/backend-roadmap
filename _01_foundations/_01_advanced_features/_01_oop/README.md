@@ -71,24 +71,24 @@ my_cat.speak()
 
 ## Exercises
 
-1. Create a Class Hierarchy: [Solution](./exercises/01.py)
+1. Create a Class Hierarchy: [Solution](./exercises/_01.py)
 
    - Design a class hierarchy for different types of vehicles (e.g., Car, Truck, Motorcycle).
    - Include attributes and methods specific to each vehicle type.
    - Include an abstract class called Vehicle, and make the other classes inherit from it.
 
-2. Implement a Bank Account System: [Solution](./exercises/02.py)
+2. Implement a Bank Account System: [Solution](./exercises/_02.py)
 
    - Create a class called BankAccount with attributes for account number, balance, and owner.
    - Implement methods for depositing, withdrawing, and checking the balance.
    - Create a subclass called SavingsAccount that inherits from BankAccount and adds an interest rate attribute.
 
-3. Design a Shape Class: [Solution](./exercises/03.py)
+3. Design a Shape Class: [Solution](./exercises/_03.py)
 
    - Create an abstract class called Shape with an abstract method called area().
    - Create subclasses for different shapes (e.g., Circle, Rectangle, Triangle) that implement the area() method.
 
-4. Implement a simple inventory system: [Solution](./exercises/04.py)
+4. Implement a simple inventory system: [Solution](./exercises/_04.py)
 
    - Create a class called Product, with attributes like name, price, and stock.
    - Create a class called Inventory, that manages a list of Product objects.
