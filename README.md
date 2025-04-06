@@ -7,8 +7,8 @@
 ### Topics
 
 - Advanced Python Features (Est. Time: 2 days)
-  - [OOP](./01-Foundations/01-Advanced-Features/01-OOP/OOP.md)
-  - Asyncio
+  - [OOP](./_01_foundations/_01_advanced_features/_01_oop/README.md)
+  - [Asyncio](./_01_foundations/_01_advanced_features/_02_asyncio/README.md)
   - Decorators
   - Generators
   - Context Managers
