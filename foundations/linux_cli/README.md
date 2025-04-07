@@ -92,8 +92,118 @@
 
 ## 2. Permissions
 
+**Understanding File Permissions:**
+
+- In Linux, every file and directory has associated permissions that control who can access them.
+- These permissions are divided into three categories:
+
+  - **User (u):** The owner of the file.
+  - **Group (g):** The group that owns the file.
+  - **Others (o):** All other users on the system.
+
+- For each category, there are three types of permissions:
+  - **Read (r):** Allows viewing the contents of a file or listing the contents of a directory.
+  - **Write (w):** Allows modifying the contents of a file or creating/deleting files within a directory.
+  - **Execute (x):** Allows executing a file (if it's a script or program) or entering a directory.
+
+**Symbolic vs. Numeric Permissions:**
+
+- **Symbolic:**
+  - Uses letters to represent permissions (r, w, x) and operators to modify them (+, -, =).
+  - **Example:** `chmod u+x file.sh` (adds execute permission for the user).
+- **Numeric (Octal):**
+  - Uses numbers to represent permissions, where each digit corresponds to user, group, and others.
+  - The numbers are calculated by adding the values: read (4), write (2), execute (1).
+  - Example: `chmod 755 file.sh` (rwx for user, rx for group and others).
+
+**`chmod` Command:**
+
+- Used to change file and directory permissions.
+- **Syntax:** `chmod [options] mode file(s)`
+- **Example:**
+  - `chmod 644 file.txt`: Sets read-write for the owner and read-only for group and others.
+  - `chmod a+x script.sh`: Adds execute permission for all users.
+  - `chmod g-w directory`: Removes write permission for the group.
+
+**`chown` Command:**
+
+- Used to change the owner and group of a file or directory.
+- Syntax: `chown [options] user[:group] file(s)`
+- Example:
+  - `chown user file.txt`: Changes the owner to user.
+  - `chown user:group file.txt`: Changes the owner to user and the group to group.
+
+**Important considerations:**
+
+- The root user can change any file permissions.
+- Be careful when using the -R (recursive) option with `chmod` and `chown`.
+
 ## 3. Package Managers
+
+**Purpose:**
+
+- Package managers simplify the process of installing, updating, and removing software on Linux systems.
+- They handle dependencies and ensure that software is installed correctly.
+
+**`apt` (Advanced Package Tool):**
+
+- Used on Debian-based distributions (Ubuntu, Debian, Linux Mint).
+- **Essential commands:**
+  - `sudo apt update`: Updates the package list.
+  - `sudo apt upgrade`: Upgrades installed packages.
+  - `sudo apt install package_name`: Installs a package.
+  - `sudo apt remove package_name`: Removes a package.
+  - `sudo apt search package_name`: Search for a package.
+  - `sudo apt autoremove`: Remove unnecessary packages.
+
+**`yum`/`dnf` (Yellowdog Updater, Modified / DNF Package Manager):**
+
+- Used on Red Hat-based distributions (CentOS, Fedora, RHEL).
+- **Essential commands:**
+  - `sudo yum update / sudo dnf update`: Updates installed packages.
+  - `sudo yum install package_name / sudo dnf install package_name`: Installs a package.
+  - `sudo yum remove package_name / sudo dnf remove package_name`: Removes a package.
+  - `sudo yum search package_name / sudo dnf search package_name`: Search for a package.
+
+**Important considerations:**
+
+- Always use sudo when installing or removing packages.
+- Keep your package list updated.
 
 ## 4. Virtual Environments
 
-See [Notes](./notes.md)
+**Purpose:**
+
+- Virtual environments isolate Python projects and their dependencies.
+- This prevents conflicts between different projects and ensures that each project has its own set of packages.
+
+**`venv` (Virtual Environment):**
+
+- Built into Python 3.
+- **Essential commands:**
+  - `python3 -m venv myenv`: Creates a virtual environment named `myenv`.
+  - `source myenv/bin/activate`: Activates the virtual environment.
+  - `deactivate`: Deactivates the virtual environment.
+  - `pip install package_name`: Installs a package within the environment.
+  - `pip freeze > requirements.txt`: Creates a list of installed packages.
+  - `pip install -r requirements.txt`: Installs packages from a requirements file.
+
+**`conda` (Anaconda/Miniconda):**
+
+- A popular alternative to venv, especially for data science and machine learning.
+- **Essential commands:**
+  - `conda create -n myenv python=3.9`: Creates a virtual environment named myenv with Python 3.9.
+  - `conda activate myenv`: Activates the virtual environment.
+  - `conda deactivate`: Deactivates the virtual environment.
+  - `conda install package_name`: Installs a package within the environment.
+  - `conda env export > environment.yml`: Creates an environment file.
+  - `conda env create -f environment.yml`: Creates an environment from an environment file.
+
+**Important considerations:**
+
+- Always activate a virtual environment before installing packages.
+- Use `requirements.txt` or `environment.yml` to manage project dependencies.
+
+> [!INFO]
+>
+> See [Notes](./notes.md)
