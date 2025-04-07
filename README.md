@@ -6,24 +6,26 @@
 
 ### Topics
 
-- Advanced Python Features (Est. Time: 2 days)
+- Advanced Python Features _(Est. Time: 2 days)_
+  - [Python Topics](https://github.com/ibrokethecode/python-roadmap)
   - [OOP](./foundations/advanced_features/oop/README.md)
   - [Asyncio](./foundations/advanced_features/asyncio/README.md)
   - Decorators
   - Generators
   - Context Managers
   - Typing
-- [Git Mastery & Collaboration Flow](./foundations/git_mastery/README.md) - Est. Time: 2 days
+- Git Mastery & Collaboration Flow _(Est. Time: 2 days)_
+  - [Git Commands](https://github.com/ibrokethecode/git-tutorial)
   - [Branching strategies](./foundations/git_mastery/README.md#1-branching-strategies)
   - [Merging vs. Rebasing](./foundations/git_mastery/README.md#2-merging-vs-rebasing)
   - [Pull Requests](./foundations/git_mastery/README.md#3-pull-requests)
   - [Code Reviews](./foundations/git_mastery/README.md#4-code-reviews)
   - [GitHub/GitLab](./foundations/git_mastery/README.md#5-githubgitlab)
-- Linux Command Line & Environment Management (Essential commands, Permissions, Package managers, Virtual Environments) - Est. Time: 1 day
-
-> [!NOTE]
-> Tools: Python 3.10+, Git, GitHub/GitLab, Virtualenv/Poetry, VS Code (or preferred editor).
-> Estimated Module Time: ~1 Week (approx. 40 hours)
+- Linux Command Line & Environment Management _(Est. Time: 1 day)_
+  - [Essential commands](./foundations/linux_cli/README.md#1-essential-commands)
+  - [Permissions](./foundations/linux_cli/README.md#2-permissions)
+  - [Package managers](./foundations/linux_cli/README.md#3-package-managers)
+  - [Virtual Environments](./foundations/linux_cli/README.md#4-virtual-environments)
 
 ## Module 2: Web Frameworks & APIs
 
