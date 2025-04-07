@@ -1,6 +1,6 @@
 # Backend Developer Roadmap (Python Focus - Accelerated)
 
-## Module 1: Foundations Revisited (Leveraging Your Background)
+## Module 1: Foundations
 
 - Goal: Ensure advanced Python concepts are solid and establish best practices for development workflow.
 
@@ -33,7 +33,11 @@
 
 ### Topics
 
-- Networking Fundamentals for Web Devs (HTTP/HTTPS, Request/Response cycle, Status Codes, DNS basics) - Est. Time: 2 days
+- Networking Fundamentals for Web Devs _(Est. Time: 2 days)_
+  - [HTTP/HTTPS](./web_frameworks/networking/README.md#1-httphttps-hypertext-transfer-protocolsecure)
+  - [Request/Response cycle](./web_frameworks/networking/README.md#2-requestresponse-cycle)
+  - [Status Codes](./web_frameworks/networking/README.md#3-status-codes)
+  - [DNS basics](./web_frameworks/networking/README.md#4-dns-basics-domain-name-system)
 - Django Deep Dive (ORM optimization, Migrations, Class-Based Views, Forms, Middleware, Caching basics, Testing w/ Pytest) - Est. Time: 10 days
 - Django REST Framework (DRF) (Serializers, APIViews & ViewSets, Routers, Authentication, Permissions, Throttling) - Est. Time: 8 days
 - FastAPI Introduction (Async, Pydantic, Dependency Injection, High-performance APIs, Auto Docs, Testing) - Est. Time: 10 days

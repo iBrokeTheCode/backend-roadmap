@@ -1,0 +1,1 @@
+- _Spotlight:_ `grep, find, curl, mkdir -p, cp -r`
