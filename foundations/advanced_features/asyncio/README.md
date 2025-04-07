@@ -104,16 +104,16 @@ if __name__ == "__main__":
 
    - Implement a rate limiter to prevent making too many requests to a website in a short period of time.
 
-   - Use asyncio.sleep() to control the rate of requests. [Solution](./exercises/_02.py)
+   - Use asyncio.sleep() to control the rate of requests.
 
 3. Progress Tracking:
 
    - Add progress tracking to the download_image function to display the download progress.
-   - You can get the content length from the response headers. [Solution](./exercises/_03.py)
+   - You can get the content length from the response headers.
 
 4. Concurrent File Processing:
 
-   - Create a async application that reads multiple files concurrently, process their content, and write the results to new files. [Solution](./exercises/_04.py)
+   - Create a async application that reads multiple files concurrently, process their content, and write the results to new files.
 
 5. Web scraping:
-   - Create a simple web scraping application that fetches data from multiple web pages concurrently. [Solution](./exercises/_05.py)
+   - Create a simple web scraping application that fetches data from multiple web pages concurrently.

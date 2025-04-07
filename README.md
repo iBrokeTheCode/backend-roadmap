@@ -7,13 +7,18 @@
 ### Topics
 
 - Advanced Python Features (Est. Time: 2 days)
-  - [OOP](./_01_foundations/_01_advanced_features/_01_oop/README.md)
-  - [Asyncio](./_01_foundations/_01_advanced_features/_02_asyncio/README.md)
+  - [OOP](./foundations/advanced_features/oop/README.md)
+  - [Asyncio](./foundations/advanced_features/asyncio/README.md)
   - Decorators
   - Generators
   - Context Managers
   - Typing
-- Git Mastery & Collaboration Flow (Branching strategies, Merging vs. Rebasing, Pull Requests, Code Reviews, GitHub/GitLab) - Est. Time: 2 days
+- [Git Mastery & Collaboration Flow](./foundations/git_mastery/README.md) - Est. Time: 2 days
+  - Branching strategies
+  - Merging vs. Rebasing
+  - Pull Requests
+  - Code Reviews
+  - GitHub/GitLab
 - Linux Command Line & Environment Management (Essential commands, Permissions, Package managers, Virtual Environments) - Est. Time: 1 day
 
 > [!NOTE]
