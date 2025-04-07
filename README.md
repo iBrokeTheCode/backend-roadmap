@@ -2,10 +2,6 @@
 
 ## Module 1: Foundations
 
-- Goal: Ensure advanced Python concepts are solid and establish best practices for development workflow.
-
-### Topics
-
 - Advanced Python Features _(Est. Time: 2 days)_
   - [Python Topics](https://github.com/ibrokethecode/python-roadmap)
   - [OOP](./foundations/advanced_features/oop/README.md)
@@ -29,10 +25,6 @@
 
 ## Module 2: Web Frameworks & APIs
 
-- Goal: Build and deploy robust web applications and APIs using modern Python frameworks, emphasizing clean code practices.
-
-### Topics
-
 - Networking Fundamentals for Web Devs _(Est. Time: 2 days)_
   - [HTTP/HTTPS](./web_frameworks/networking/README.md#1-httphttps-hypertext-transfer-protocolsecure)
   - [Request/Response cycle](./web_frameworks/networking/README.md#2-requestresponse-cycle)
@@ -44,34 +36,14 @@
 - RESTful API Design Principles (Statelessness, Resource Naming, Idempotency, HATEOAS concepts) - Est. Time: 2 days
 - API Authentication In-Depth (JWT details, OAuth2 concepts & flows) - Est. Time: 3 days
 
-> [!NOTE]
-> Core Practice: Emphasis on Clean Code Practices (Readability, DRY, KISS, YAGNI) and basic Design Principles (e.g., Separation of Concerns) throughout framework learning and project work. Using Linters (Flake8, Black).
-> Tools: Django, DRF, FastAPI, Pydantic, Pytest, HTTPie/Postman/Insomnia, Flake8, Black.
-> Practical Application: Start building a significant portfolio project applying learned concepts and clean code standards.
-> Estimated Module Time: ~5 Weeks (approx. 200 hours)
-
 ## Module 3: Data Management
-
-- Goal: Design databases, write efficient queries, and manage data effectively using both SQL and NoSQL solutions.
-
-### Topics
 
 - Relational Databases & SQL (PostgreSQL: Advanced SELECT, JOINs, Subqueries, Window Functions, Indexing, Transactions, ACID) - Est. Time: 7 days
 - Database Design & Modeling (Normalization, ERDs, Data types) - Est. Time: 3 days
 - ORM Proficiency (Django ORM advanced usage, QuerySet optimization) - Est. Time: 2 days (plus integration)
 - NoSQL Databases (Concepts: CAP, BASE; Use cases; Intro to MongoDB & Redis basics) - Est. Time: 5 days
 
-> [!NOTE]
-> Core Practice: Apply clean code principles to queries and data access layers.
-> Tools: PostgreSQL, pgAdmin/DBeaver, MongoDB, Redis.
-> Practical Application: Implement complex data models and interactions in your portfolio project.
-> Estimated Module Time: ~3 Weeks (approx. 120 hours)
-
 ## Module 4: Deployment & Infrastructure (DevOps Basics)
-
-- Goal: Understand how to package, deploy, and manage backend applications in real-world environments.
-
-### Topics
 
 - Containerization with Docker (Dockerfiles, Docker Compose, Registries, Best practices) - Est. Time: 5 days
 - Cloud Platform Fundamentals (Choose AWS/GCP/Azure: Core Compute, Storage, Database, Basic Networking) - Est. Time: 7 days
@@ -79,17 +51,7 @@
 - Web Servers & Reverse Proxies (Nginx config basics, Gunicorn/Uvicorn) - Est. Time: 2 days
 - Introduction to Logging & Monitoring (Concepts, Basic tools) - Est. Time: 2 days
 
-> [!NOTE]
-> Core Practice: Write clear and maintainable Dockerfiles and CI/CD configurations.
-> Tools: Docker, Docker Compose, AWS/GCP/Azure CLI & Console, Nginx, Gunicorn/Uvicorn, GitHub Actions/GitLab CI.
-> Practical Application: Containerize and deploy your portfolio project using CI/CD.
-> Estimated Module Time: ~3 Weeks (approx. 120 hours)
-
 ## Module 5: Advanced Topics & Job Readiness
-
-- Goal: Round out skillset with advanced concepts, solidify understanding of principles, and prepare for the job market.
-
-### Topics
 
 - Advanced Testing (Mocking/Patching, Integration testing, Load testing concepts) - Est. Time: 4 days
 - Security Best Practices (OWASP Top 10 deep dive, Input validation, Rate limiting, CORS, HTTPS) - Est. Time: 4 days
@@ -101,9 +63,3 @@
 - Portfolio Project(s) Refinement & Showcase (Ensure 1-2 strong projects) - Est. Time: 10 days (polish)
 - Resume/CV & LinkedIn Optimization - Est. Time: 2 days
 - Interview Preparation (Coding challenges, System Design scenarios, Behavioral questions - STAR method) - Est. Time: 5 days (dedicated practice, plus ongoing)
-
-> [!NOTE]
-> Tools: Pytest (advanced), Security scanners (basic), LeetCode/HackerRank, Your Portfolio Site/GitHub Pages.
-> Practical Application: Polish projects applying all learned principles, practice interviews, actively apply for jobs.
-> Estimated Module Time: ~4 Weeks (approx. 160 hours) + Ongoing effort
-> Total Estimated Time: ~17 Weeks / Just over 4 months (highly dependent on individual pace and depth).
