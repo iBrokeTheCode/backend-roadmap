@@ -2,75 +2,96 @@
 
 ## 1. Essential Commands:
 
-**Theory:**
+**File and Directory Manipulation:**
 
-- The Linux command line provides a powerful way to interact with the operating system.
-- Mastering essential commands will significantly improve your productivity.
+- `ls [options] [path]`: List directory contents.
 
-**Examples:**
+  - `ls -l`: Long listing format, showing file permissions, ownership, size, and modification time.
+  - `ls -a`: List all files, including hidden files (those starting with a dot).
+  - `ls -h`: Human-readable file sizes.
+  - `ls -t`: Sort by modification time.
+  - `ls -r`: Reverse order.
 
-- `cd /var/log`: Change directory to `/var/log`.
-- `ls -l`: List files and directories with detailed information.
-- `grep "error" logfile.txt`: Search for lines containing "error" in `logfile.txt`.
-- `sudo apt install nginx`: Install the Nginx web server.
+- `cd [path]`: Change directory.
 
-**Exercises:**
+  - `cd ~`: Go to the home directory.
+  - `cd ..`: Go up one directory level.
+  - `cd -`: Go to the previous directory.
 
-- Practice navigating the file system and manipulating files and directories.
-- Use `grep` and `sed` to process text files.
-- Install and configure a web server (e.g., Nginx).
+- `pwd`: Print working directory (the current directory).
+- `mkdir [options] directory_name`: Create a directory.
+
+  - `mkdir -p path/to/nested/directory`: Create nested directories.
+
+- `rm [options] file_or_directory`: Remove files or directories.
+  - `rm file.txt`: Remove file.txt.
+  - `rm -r directory`: Remove a directory and its contents recursively.
+  - `rm -f file.txt`: Force removal, ignoring non-existent files and suppressing prompts.
+- `cp [options] source destination`: Copy files or directories.
+  - `cp file1.txt file2.txt`: Copy file1.txt to file2.txt.
+  - `cp -r directory1 directory2`: Copy directory1 to directory2 recursively.
+- `mv [options] source destination`: Move or rename files or directories.
+  - `mv file1.txt file2.txt`: Rename file1.txt to file2.txt.
+  - `mv file.txt directory/`: Move file.txt to the directory.
+
+**Text File Manipulation:**
+
+- `cat [file]`: Concatenate and display file contents.
+- `less [file]`: View file contents page by page.
+- `head [file]`: Display the first few lines of a file.
+- `tail [file]`: Display the last few lines of a file.
+  - `tail -f file.log`: Follow (continuously display) the contents of a log file.
+- `grep [options] pattern [file]`: Search for patterns in files.
+  - `grep -i "pattern" file.txt`: Case-insensitive search.
+  - `grep -r "pattern" directory/`: Recursive search in a directory.
+- `sed [options] 'command' [file]`: Stream editor for text manipulation.
+  - `sed 's/old/new/g' file.txt`: Replace all occurrences of "old" with "new".
+- `awk '[pattern] {action}' [file]`: Powerful text processing tool.
+  - `awk '{print $1}' file.txt`: Print the first column of each line.
+
+**Process Management:**
+
+- `ps [options]`: List running processes.
+  - `ps aux`: List all processes with detailed information.
+  - `ps -ef | grep process_name`: find a process by name.
+- `top`: Display real-time system information and process activity.
+- `kill [options] PID`: Terminate a process (where PID is the process ID).
+  - `kill -9 PID`: Forcefully terminate a process.
+- `bg`: List background jobs; resume a suspended job in the background.
+- `fg`: List background jobs; resume a suspended job in the foreground.
+
+**Networking:**
+
+- `ping [host]`: Check network connectivity.
+- `curl [URL]`: Transfer data from or to a server.
+  - `curl -O URL`: Download a file.
+- `wget [URL]`: Download files from the web.
+- `netstat [options]`: Display network connections and statistics.
+  - `netstat -tuln`: List listening TCP and UDP ports.
+- `ssh [user]@[host]`: Secure shell to connect to a remote server.
+- `ifconfig or ip addr`: Display network interface information.
+
+**System Information:**
+
+- `uname -a`: Display system information.
+- `df -h`: Display disk space usage.
+- `du -sh directory/`: Display directory space usage.
+- `free -h`: Display memory usage.
+- `history`: Display command history.
+
+**Other:**
+
+- `sudo [command]`: Execute a command with superuser privileges.
+- `man [command]`: Display the manual page for a command.
+- `echo [string]`: Display a string.
+- `find [path] [options]`: Search for files and directories.
+  - `find . -name "\*.txt"`: find all files with .txt extension in the current directory.
+- `tar`: used to archive and extract files.
+  - `tar -czvf archive.tar.gz directory/`: create a compressed archive.
+  - `tar -xzvf archive.tar.gz`: extract a compressed archive.
 
 ## 2. Permissions
 
-**Theory:**
-
-- Linux uses a permission system to control access to files and directories.
-- Understanding permissions is crucial for security and system administration.
-
-**Examples:**
-
-- `chmod 755 script.sh`: Make script.sh executable.
-- `chown user:group file.txt`: Change the owner and group of file.txt.
-
-**Exercises:**
-
-- Experiment with different permission settings.
-- Create a script that requires specific permissions.
-- Research and apply best practices for file and directory permissions.
-
 ## 3. Package Managers
 
-**Theory:**
-
-- Package managers simplify the process of installing, updating, and removing software.
-- `apt` and `yum/dnf` are commonly used on Debian/Ubuntu and Red Hat/CentOS/Fedora, respectively.
-
-**Examples:**
-
-`sudo apt update`: Update the package list.
-`sudo yum install git`: Install Git.
-
-**Exercises:**
-
-- Install and remove software using your distribution's package manager.
-- Explore different package management commands and options.
-
 ## 4. Virtual Environments
-
-**Theory:**
-
-- Virtual environments isolate Python projects and their dependencies.
-- This prevents conflicts between different projects.
-- `venv` is built into Python, and `conda` is a popular alternative.
-
-**Examples:**
-
-- `python3 -m venv myenv`: Create a virtual environment named `myenv`.
-- `source myenv/bin/activate`: Activate the virtual environment.
-- `pip install requests`: Install the requests library within the environment.
-
-**Exercises:**
-
-- Create and activate virtual environments for different projects.
-- Install and manage Python packages using `pip` or `conda`.
-- Experiment with different virtual environment configurations.
