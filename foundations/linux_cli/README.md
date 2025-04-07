@@ -204,6 +204,5 @@
 - Always activate a virtual environment before installing packages.
 - Use `requirements.txt` or `environment.yml` to manage project dependencies.
 
-> [!INFO]
->
+> [!NOTE]
 > See [Notes](./notes.md)

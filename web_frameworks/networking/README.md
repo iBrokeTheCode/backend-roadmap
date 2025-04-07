@@ -76,6 +76,5 @@
 - Resolver queries DNS servers until it finds the IP address.
 - Resolver returns the IP address to the browser.
 
-> [!INFO]
->
+> [!NOTE]
 > See [Notes](./notes.md)
