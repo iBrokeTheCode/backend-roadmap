@@ -14,11 +14,11 @@
   - Context Managers
   - Typing
 - [Git Mastery & Collaboration Flow](./foundations/git_mastery/README.md) - Est. Time: 2 days
-  - Branching strategies
-  - Merging vs. Rebasing
-  - Pull Requests
-  - Code Reviews
-  - GitHub/GitLab
+  - [Branching strategies](./foundations/git_mastery/README.md#1-branching-strategies)
+  - [Merging vs. Rebasing](./foundations/git_mastery/README.md#2-merging-vs-rebasing)
+  - [Pull Requests](./foundations/git_mastery/README.md#3-pull-requests)
+  - [Code Reviews](./foundations/git_mastery/README.md#4-code-reviews)
+  - [GitHub/GitLab](./foundations/git_mastery/README.md#5-githubgitlab)
 - Linux Command Line & Environment Management (Essential commands, Permissions, Package managers, Virtual Environments) - Est. Time: 1 day
 
 > [!NOTE]

@@ -26,10 +26,10 @@
 
 **Theory:**
 
-- Merging: Creates a new commit that combines changes from two branches. Preserves history.
-- Rebasing: Rewrites the commit history by moving commits from one branch onto another. Creates a linear history.
-- Merging: `git merge feature/my-feature`
-- Rebasing: `git rebase main` (while on feature/my-feature branch)
+- **Merging:** Creates a new commit that combines changes from two branches. Preserves history.
+- **Rebasing:** Rewrites the commit history by moving commits from one branch onto another. Creates a linear history.
+- **Merging:** `git merge feature/my-feature`
+- **Rebasing:** `git rebase main` (while on feature/my-feature branch)
 
 **Example:**
 
@@ -48,8 +48,8 @@
 
 - Pull requests (PRs) are a way to propose changes to a repository.
 - They allow for code reviews and discussions before merging.
-- Creating a PR: Push your branch to a remote repository and create a PR on GitHub/GitLab.
-- Reviewing a PR: Provide feedback and approve or reject the changes.
+- **Creating a PR:** Push your branch to a remote repository and create a PR on GitHub/GitLab.
+- **Reviewing a PR:** Provide feedback and approve or reject the changes.
 
 **Example:**
 
@@ -86,9 +86,9 @@
 
 - GitHub and GitLab are popular platforms for Git repositories and collaboration.
 - They provide features like issue tracking, pull requests, and CI/CD.
-- Managing repositories: Create, clone, and manage repositories.
-- Using issues: Track bugs and feature requests.
-- Using pull requests: Propose and review changes.
+- **Managing repositories:** Create, clone, and manage repositories.
+- **Using issues:** Track bugs and feature requests.
+- **Using pull requests:** Propose and review changes.
 
 **Example:**
 
