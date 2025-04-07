@@ -6,9 +6,8 @@
 
 - HTTP is the foundation of data communication for the World Wide Web. It's an application-layer protocol that defines how messages are formatted and transmitted.
 - HTTPS is the secure version of HTTP. It encrypts the communication using SSL/TLS, ensuring data privacy and integrity.
-- Key differences:
-- HTTP: Unencrypted, data is sent in plain text.
-- HTTPS: Encrypted, data is secured using SSL/TLS certificates.
+- **HTTP:** Unencrypted, data is sent in plain text.
+- **HTTPS:** Encrypted, data is secured using SSL/TLS certificates.
 
 **Importance:**
 
@@ -50,19 +49,19 @@
 **Common Codes:**
 
 - **2xx (Success):**
-  - 200 OK: Request succeeded.
-  - 201 Created: Resource created successfully.
+  - **200 OK:** Request succeeded.
+  - **201 Created:** Resource created successfully.
 - **3xx (Redirection):**
-  - 301 Moved Permanently: Resource moved to a new URL.
-  - 302 Found: Resource temporarily moved.
+  - **301 Moved Permanently:** Resource moved to a new URL.
+  - **302 Found:** Resource temporarily moved.
 - **4xx (Client Error):**
-  - 400 Bad Request: Invalid request syntax.
-  - 401 Unauthorized: Authentication required.
-  - 403 Forbidden: Server refuses to authorize the request.
-  - 404 Not Found: Resource not found.
+  - **400 Bad Request:** Invalid request syntax.
+  - **401 Unauthorized:** Authentication required.
+  - **403 Forbidden:** Server refuses to authorize the request.
+  - **404 Not Found:** Resource not found.
 - **5xx (Server Error):**
-  - 500 Internal Server Error: Server encountered an error.
-  - 503 Service Unavailable: Server temporarily unavailable.
+  - **500 Internal Server Error:** Server encountered an error.
+  - **503 Service Unavailable:** Server temporarily unavailable.
 
 ## 4. DNS Basics (Domain Name System):
 
@@ -77,24 +76,4 @@
 - Resolver queries DNS servers until it finds the IP address.
 - Resolver returns the IP address to the browser.
 
-## Exercises
-
-1. **HTTP Request/Response Exploration:**
-
-   - Use your browser's developer tools (Network tab) to inspect HTTP requests and responses when visiting websites.
-   - Observe the request methods, URLs, headers, and status codes.
-
-2. **Status Code Experimentation:**
-
-   - Try accessing non-existent URLs to observe 404 Not Found errors.
-   - Research and experiment with other HTTP status codes.
-
-3. **DNS Lookup:**
-
-   - Use the `nslookup` or `dig` command-line tools to perform DNS lookups for various domain names.
-   - Example: `nslookup google.com`
-
-4. **HTTP Client:**
-
-   - Use a tool like curl or httpie to make HTTP requests from the command line.
-   - Example: `curl https://www.example.com`
+See [Notes](./notes.md)

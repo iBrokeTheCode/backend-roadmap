@@ -95,3 +95,5 @@
 ## 3. Package Managers
 
 ## 4. Virtual Environments
+
+See [Notes](./notes.md)
