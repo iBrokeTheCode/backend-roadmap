@@ -2,14 +2,6 @@
 
 ## Module 1: Foundations
 
-- Advanced Python Features _(Est. Time: 2 days)_
-  - [Python Topics](https://github.com/ibrokethecode/python-roadmap)
-  - [OOP](./foundations/advanced_features/oop/README.md)
-  - [Asyncio](./foundations/advanced_features/asyncio/README.md)
-  - Decorators
-  - Generators
-  - Context Managers
-  - Typing
 - Git Mastery & Collaboration Flow _(Est. Time: 2 days)_
   - [Git Commands](https://github.com/ibrokethecode/git-tutorial)
   - [Branching strategies](./foundations/git_mastery/README.md#1-branching-strategies)
@@ -30,7 +22,15 @@
   - [Request/Response cycle](./web_frameworks/networking/README.md#2-requestresponse-cycle)
   - [Status Codes](./web_frameworks/networking/README.md#3-status-codes)
   - [DNS basics](./web_frameworks/networking/README.md#4-dns-basics-domain-name-system)
-- Django Deep Dive (ORM optimization, Migrations, Class-Based Views, Forms, Middleware, Caching basics, Testing w/ Pytest) - Est. Time: 10 days
+- Django Deep Dive _(Est. Time: 10 days)_
+  - [Django setup and project structure](./web_frameworks/django/setup/README.md)
+  - ORM optimization
+  - Migrations
+  - Class-Based Views
+  - Forms
+  - Middleware
+  - Caching basics
+  - Testing w/ Pytest
 - Django REST Framework (DRF) (Serializers, APIViews & ViewSets, Routers, Authentication, Permissions, Throttling) - Est. Time: 8 days
 - FastAPI Introduction (Async, Pydantic, Dependency Injection, High-performance APIs, Auto Docs, Testing) - Est. Time: 10 days
 - RESTful API Design Principles (Statelessness, Resource Naming, Idempotency, HATEOAS concepts) - Est. Time: 2 days
