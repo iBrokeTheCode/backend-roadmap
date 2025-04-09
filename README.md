@@ -27,7 +27,7 @@
   - [Django Models and Database Interaction](./web_frameworks/django/models/README.md)
   - [Django Views and URL Routing](./web_frameworks/django/views_urls/README.md)
   - [Django Templates and Static Files](./web_frameworks/django/templates_static/README.md)
-  - Django Forms and User Authentication
+  - [Django Forms and User Authentication](./web_frameworks/django/forms_authentication/README.md)
   - Django Middleware and Caching Basics
   - Testing with Pytest
   - Django ORM Optimization
