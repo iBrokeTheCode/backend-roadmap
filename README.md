@@ -25,13 +25,14 @@
 - Django Deep Dive _(Est. Time: 10 days)_
   - [Django setup and project structure](./web_frameworks/django/setup/README.md)
   - [Django Models and Database Interaction](./web_frameworks/django/models/README.md)
-  - ORM optimization
-  - Migrations
-  - Class-Based Views
-  - Forms
-  - Middleware
-  - Caching basics
-  - Testing w/ Pytest
+  - [Django Views and URL Routing](./web_frameworks/django/views_urls/README.md)
+  - Django Templates and Static Files
+  - Django Forms and User Authentication
+  - Django Middleware and Caching Basics
+  - Testing with Pytest
+  - Django ORM Optimization
+  - Django Migrations (Advanced)
+  - Django Class-Based Views
 - Django REST Framework (DRF) (Serializers, APIViews & ViewSets, Routers, Authentication, Permissions, Throttling) - Est. Time: 8 days
 - FastAPI Introduction (Async, Pydantic, Dependency Injection, High-performance APIs, Auto Docs, Testing) - Est. Time: 10 days
 - RESTful API Design Principles (Statelessness, Resource Naming, Idempotency, HATEOAS concepts) - Est. Time: 2 days
