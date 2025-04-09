@@ -24,6 +24,7 @@
   - [DNS basics](./web_frameworks/networking/README.md#4-dns-basics-domain-name-system)
 - Django Deep Dive _(Est. Time: 10 days)_
   - [Django setup and project structure](./web_frameworks/django/setup/README.md)
+  - [Django Models and Database Interaction](./web_frameworks/django/models/README.md)
   - ORM optimization
   - Migrations
   - Class-Based Views
