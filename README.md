@@ -30,12 +30,12 @@
    &nbsp;&nbsp;- [Inheritance, polymorphism, encapsulation](https://github.com/iBrokeTheCode/python-roadmap/blob/main/OOP/OOP_Pillars.md#3-encapsulation-inheritance-polymorphism-abstraction)
 
    2.4. **Working with Files & Data** (8 h)  
-   &nbsp;&nbsp;- `pathlib` & file I/O  
+   &nbsp;&nbsp;- `pathlib` & [file I/O](https://github.com/iBrokeTheCode/python-roadmap/blob/main/Standard_Library_Modules/Files_IO/Files_IO.md)  
    &nbsp;&nbsp;- [JSON serialization/deserialization](https://github.com/iBrokeTheCode/python-roadmap/blob/main/Standard_Library_Modules/Core_Modules/JSON/JSON.md)  
    &nbsp;&nbsp;- [`argparse` for CLI scripts](https://github.com/iBrokeTheCode/python-roadmap/blob/main/Standard_Library_Modules/Core_Modules/Argparse/Argparse.md)
 
    2.5. **Advanced Python Features** (8 h)  
-   &nbsp;&nbsp;- List/dict comprehensions  
+   &nbsp;&nbsp;- [List comprehension](https://github.com/iBrokeTheCode/python-roadmap/blob/main/Fundamentals/Lists/Lists.md#list-comprehension) & [Dict comprehension](https://github.com/iBrokeTheCode/python-roadmap/blob/main/Fundamentals/Dicts/Dicts.md#dictionary-comprehensions)  
    &nbsp;&nbsp;- [Generators & iterators](https://github.com/iBrokeTheCode/python-roadmap/blob/main/Advanced/Generators_and_Iterators/Generators_and_Iterators.md)  
    &nbsp;&nbsp;- [Context managers (`with`)](https://github.com/iBrokeTheCode/python-roadmap/blob/main/Advanced/Context_Managers/Context_Managers.md)
 
