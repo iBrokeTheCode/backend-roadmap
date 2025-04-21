@@ -92,9 +92,10 @@
    &nbsp;&nbsp;- JSON schemas & validation
 
    6.2. **Django REST Framework** (8 h)  
-   &nbsp;&nbsp;- Serializers & ModelViewSets  
-   &nbsp;&nbsp;- Routers & URL conf  
-   &nbsp;&nbsp;- Browsable API & permissions
+   &nbsp;&nbsp;- [Serializers](https://github.com/iBrokeTheCode/django-rest-framework/blob/main/notes/lesson-02.md) & [ModelViewSets, GenericViews](https://github.com/iBrokeTheCode/django-rest-framework/blob/main/notes/lesson-06.md)  
+   &nbsp;&nbsp;- [Routers & URL conf](https://github.com/iBrokeTheCode/django-rest-framework/blob/main/notes/lesson-20.md)  
+   &nbsp;&nbsp;- [Browsable API](https://github.com/iBrokeTheCode/django-rest-framework/blob/main/notes/lesson-02.md) & [permissions](https://github.com/iBrokeTheCode/django-rest-framework/blob/main/notes/lesson-08.md)  
+   &nbsp;&nbsp;- [Django REST Framework Deep Dive](https://github.com/iBrokeTheCode/django-rest-framework)
 
    6.3. **FastAPI** (8 h)  
    &nbsp;&nbsp;- Path/Query/Body parameters  
@@ -107,7 +108,7 @@
    &nbsp;&nbsp;- Django’s built‑in system
 
    7.2. **Token‑based Auth** (4 h)  
-   &nbsp;&nbsp;- DRF Token Auth  
+   &nbsp;&nbsp;- [DRF Token Auth](https://github.com/iBrokeTheCode/django-rest-framework/blob/main/notes/lesson-12.md)  
    &nbsp;&nbsp;- FastAPI OAuth2 password flow
 
    7.3. **JWT & OAuth2** (6 h)  
@@ -144,7 +145,7 @@
 
 10. **Advanced Database Topics** (15 h)  
     10.1. **ACID & Isolation** (4 h)  
-    10.2. **N+1 Problem & Query Optimization** (4 h)  
+    10.2. **[N+1 Problem](https://github.com/iBrokeTheCode/orm-deep-dive/blob/main/notes/lesson-07.md#n1-problem) & [Query Optimization](https://github.com/iBrokeTheCode/orm-deep-dive/blob/main/notes/lesson-07.md)** (4 h)  
     10.3. **Indexing Strategies** (4 h)  
     10.4. **Normalization & Denormalization** (3 h)
 
