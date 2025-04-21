@@ -1,5 +1,3 @@
-# Backend Developer Roadmap
-
 # Python Backend Developer Roadmap
 
 1. **Foundations** (10 h)  
@@ -17,7 +15,7 @@
 2. **Python Core** (40 h)  
    2.1. **Syntax, Data Types & Control Flow** (8 h)  
    &nbsp;&nbsp;- Variables, numbers, strings, booleans  
-   &nbsp;&nbsp;- Lists, tuples, sets, dicts  
+   &nbsp;&nbsp;- [Lists](https://github.com/iBrokeTheCode/python-roadmap/blob/main/Fundamentals/Lists/Lists.md), [tuples](https://github.com/iBrokeTheCode/python-roadmap/blob/main/Fundamentals/Tuples/Tuples.md), [sets](https://github.com/iBrokeTheCode/python-roadmap/blob/main/Fundamentals/Sets/Sets.md), [dicts](https://github.com/iBrokeTheCode/python-roadmap/blob/main/Fundamentals/Dicts/Dicts.md)  
    &nbsp;&nbsp;- `if`/`elif`/`else`, loops (`for`/`while`)  
    2.2. **Functions, Modules & Packages** (8 h)  
    &nbsp;&nbsp;- Defining functions, args/kwargs  
@@ -27,12 +25,12 @@
    &nbsp;&nbsp;- Inheritance, polymorphism, encapsulation  
    2.4. **Working with Files & Data** (8 h)  
    &nbsp;&nbsp;- `pathlib` & file I/O  
-   &nbsp;&nbsp;- JSON serialization/deserialization  
-   &nbsp;&nbsp;- `argparse` for CLI scripts  
+   &nbsp;&nbsp;- [JSON serialization/deserialization](https://github.com/iBrokeTheCode/python-roadmap/blob/main/Standard_Library_Modules/Core_Modules/JSON/JSON.md)  
+   &nbsp;&nbsp;- [`argparse` for CLI scripts](https://github.com/iBrokeTheCode/python-roadmap/blob/main/Standard_Library_Modules/Core_Modules/Argparse/Argparse.md)
    2.5. **Advanced Python Features** (8 h)  
    &nbsp;&nbsp;- List/dict comprehensions  
-   &nbsp;&nbsp;- Generators & iterators  
-   &nbsp;&nbsp;- Context managers (`with`)
+   &nbsp;&nbsp;- [Generators & iterators](https://github.com/iBrokeTheCode/python-roadmap/blob/main/Advanced/Generators_and_Iterators/Generators_and_Iterators.md)
+   &nbsp;&nbsp;- [Context managers (`with`)](https://github.com/iBrokeTheCode/python-roadmap/blob/main/Advanced/Context_Managers/Context_Managers.md)
 
 3. **Version Control** (8 h)  
    3.1. **Git Basics** (4 h)  
