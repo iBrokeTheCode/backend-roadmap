@@ -72,15 +72,17 @@
 5. **ORM & Data Migrations** (12 h)
 
    5.1. **Django ORM Fundamentals** (6 h)  
-   &nbsp;&nbsp;- Models, querysets, managers  
-   &nbsp;&nbsp;- Relationships & lookups
+   &nbsp;&nbsp;- [Models, querysets, managers](https://github.com/iBrokeTheCode/orm-deep-dive/blob/main/notes/lesson-02.md)  
+   &nbsp;&nbsp;- [M2M Relationships](https://github.com/iBrokeTheCode/orm-deep-dive/blob/main/notes/lesson-08.md) & [Foreign Keys](https://github.com/iBrokeTheCode/orm-deep-dive/blob/main/notes/lesson-03.md)  
+   &nbsp;&nbsp;- [Lookups](https://github.com/iBrokeTheCode/orm-deep-dive/blob/main/notes/lesson-06.md)  
+   &nbsp;&nbsp;- [ORM Deep Dive](https://github.com/ibrokethecode/orm-deep-dive?tab=readme-ov-file#orm-deep-dive-tutorial)
 
    5.2. **SQLModel & Alembic (FastAPI)** (4 h)  
    &nbsp;&nbsp;- Defining models  
    &nbsp;&nbsp;- Auto‑generating migrations
 
    5.3. **Migrations & Seeding** (2 h)  
-   &nbsp;&nbsp;- `makemigrations`/`migrate`  
+   &nbsp;&nbsp;- [`makemigrations`/`migrate`](https://github.com/iBrokeTheCode/orm-deep-dive/blob/main/notes/lesson-02.md)  
    &nbsp;&nbsp;- Fixtures & seed scripts
 
 6. **Building REST APIs** (20 h)
@@ -116,6 +118,7 @@
 8. **Testing** (12 h)
 
    8.1. **Unit Testing with pytest** (4 h)  
+   &nbsp;&nbsp;- [Introduction to Pytest and Unittest](https://github.com/iBrokeTheCode/python-roadmap/blob/main/testing/Unit_Testing.md)  
    &nbsp;&nbsp;- Fixtures, parametrization
 
    8.2. **Integration Tests** (4 h)  
