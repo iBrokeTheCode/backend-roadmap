@@ -72,10 +72,10 @@
 5. **ORM & Data Migrations** (12 h)
 
    5.1. **Django ORM Fundamentals** (6 h)  
+   &nbsp;&nbsp;- [ORM Deep Dive](https://github.com/ibrokethecode/orm-deep-dive?tab=readme-ov-file#orm-deep-dive-tutorial)  
    &nbsp;&nbsp;- [Models, querysets, managers](https://github.com/iBrokeTheCode/orm-deep-dive/blob/main/notes/lesson-02.md)  
    &nbsp;&nbsp;- [M2M Relationships](https://github.com/iBrokeTheCode/orm-deep-dive/blob/main/notes/lesson-08.md) & [Foreign Keys](https://github.com/iBrokeTheCode/orm-deep-dive/blob/main/notes/lesson-03.md)  
-   &nbsp;&nbsp;- [Lookups](https://github.com/iBrokeTheCode/orm-deep-dive/blob/main/notes/lesson-06.md)  
-   &nbsp;&nbsp;- [ORM Deep Dive](https://github.com/ibrokethecode/orm-deep-dive?tab=readme-ov-file#orm-deep-dive-tutorial)
+   &nbsp;&nbsp;- [Lookups](https://github.com/iBrokeTheCode/orm-deep-dive/blob/main/notes/lesson-06.md)
 
    5.2. **SQLModel & Alembic (FastAPI)** (4 h)  
    &nbsp;&nbsp;- Defining models  
@@ -91,11 +91,12 @@
    &nbsp;&nbsp;- Resources, verbs, status codes  
    &nbsp;&nbsp;- JSON schemas & validation
 
-   6.2. **Django REST Framework** (8 h)  
+   6.2. **Django REST Framework** (8 h)
+
+   &nbsp;&nbsp;- [Django REST Framework Deep Dive](https://github.com/iBrokeTheCode/django-rest-framework)  
    &nbsp;&nbsp;- [Serializers](https://github.com/iBrokeTheCode/django-rest-framework/blob/main/notes/lesson-02.md) & [ModelViewSets, GenericViews](https://github.com/iBrokeTheCode/django-rest-framework/blob/main/notes/lesson-06.md)  
    &nbsp;&nbsp;- [Routers & URL conf](https://github.com/iBrokeTheCode/django-rest-framework/blob/main/notes/lesson-20.md)  
-   &nbsp;&nbsp;- [Browsable API](https://github.com/iBrokeTheCode/django-rest-framework/blob/main/notes/lesson-02.md) & [permissions](https://github.com/iBrokeTheCode/django-rest-framework/blob/main/notes/lesson-08.md)  
-   &nbsp;&nbsp;- [Django REST Framework Deep Dive](https://github.com/iBrokeTheCode/django-rest-framework)
+   &nbsp;&nbsp;- [Browsable API](https://github.com/iBrokeTheCode/django-rest-framework/blob/main/notes/lesson-02.md) & [permissions](https://github.com/iBrokeTheCode/django-rest-framework/blob/main/notes/lesson-08.md)
 
    6.3. **FastAPI** (8 h)  
    &nbsp;&nbsp;- Path/Query/Body parameters  
