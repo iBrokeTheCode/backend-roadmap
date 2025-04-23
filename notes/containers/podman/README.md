@@ -61,7 +61,7 @@ podman run docker.io/nginx
 Configure ports
 
 ```shell
-podman run --publish 8080:80 nginx
+podman run --publish <host_port>:<container_port> nginx
 podman run -p 8080:80 nginx
 ```
 
@@ -86,4 +86,60 @@ Give a name
 
 ```shell
 podman run --name web --publish 8080:80 --detach nginx
+```
+
+Execute commands in container
+
+```shell
+#
+podman exec <container_id | container_name> cat /etc/os-release
+
+# Interactive
+podman exec -it <container_id | container_name> bash
+```
+
+See containers
+
+```shell
+podman ps
+podman ps -a
+```
+
+Stop containers
+
+```shell
+podman stop <container_id | container_name>
+```
+
+Start containers
+
+```shell
+podman start <container_id | container_name>
+```
+
+Remove containers
+
+```shell
+# Remove stopped containers
+podman rm <container_id | container_name>
+
+# Force container remove
+podman rm <container_id | container_name> -f
+
+# Remove all containers
+podman rm $(podman ps -aq) -f
+```
+
+List images
+
+```shell
+podman images
+podman image -q
+```
+
+Remove images
+
+```shell
+podman rmi <image_id | image_name>
+podman rmi $(podman images -q)
 ```

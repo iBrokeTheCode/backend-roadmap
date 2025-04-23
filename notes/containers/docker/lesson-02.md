@@ -61,11 +61,6 @@ Clear the terminal.
 
 ```bash
 clear
-```
-
-or
-
-```bash
 cls # for Windows
 ```
 
