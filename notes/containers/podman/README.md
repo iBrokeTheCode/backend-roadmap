@@ -259,8 +259,14 @@ COPY ./site .
 EXPOSE 80
 ```
 
+> [!CAUTION]
+> Error: creating build container: short-name "nginx:latest" did not resolve to an alias and no unqualified-search registries are defined in "/etc/containers/registries.conf"
+
 > [!IMPORTANT]
 > By default an error occurred if you don't have the `nginx` image and try to download (Error about registries) (FIX IT)
+> Review error about registries
+> Update this README
+> Docker extension for Podman
 
 Build the docker image
 
