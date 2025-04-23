@@ -25,6 +25,9 @@ This lesson demonstrates the process of creating and running custom Docker image
 2.  **Create a Dockerfile for the Static Site:**
     Create a file named `Dockerfile` in the same directory as the static site content. Add instructions to define the base image (Nginx), set the working directory, copy the static content, and expose the web server port.
 
+    > [!ERROR]
+    > Error: creating build container: short-name "nginx:latest" did not resolve to an alias and no unqualified-search registries are defined in "/etc/containers/registries.conf"
+
     ```dockerfile
     FROM nginx:latest
     WORKDIR /usr/share/nginx/html
@@ -49,7 +52,12 @@ This lesson demonstrates the process of creating and running custom Docker image
     ```
 
 6.  **Access the Application in the Container:**
-    Open a web browser and navigate to `localhost` followed by the host port you mapped (e.g., `localhost:8080`) to see the static site being served from the container.
+    Open a web browser and navigate to `localhost` followed by the host port you mapped (e.g., `localhost:8080/index.html`) to see the static site being served from the container.
+
+---
+
+## Continues at minute 12:00
+
 7.  **Modify the Source Code and Rebuild:**
     Edit the static site files (e.g., change a color in the CSS). Then, rebuild the image using the same build command but perhaps with a different tag to represent the change.
 

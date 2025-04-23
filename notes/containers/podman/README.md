@@ -245,3 +245,35 @@ Example:
 ```bash
 podman run -e ACCEPT_EULA=Y -e SECRET_KEY=abc123 my-app-image
 ```
+
+---
+
+## Custom Images
+
+Create a `Dockerfile` file or `Containerfile`. For instance
+
+```docker
+FROM nginx:latest
+WORKDIR /usr/share/nginx/html
+COPY ./site .
+EXPOSE 80
+```
+
+> [!IMPORTANT]
+> By default an error occurred if you don't have the `nginx` image and try to download (Error about registries) (FIX IT)
+
+Build the docker image
+
+```shell
+podman build -t star-wars-app:v1 .
+```
+
+Verify the Built Image: Use the `podman images` command
+
+Run a Container from the Custom Image
+
+```shell
+podman run --name web -p 8080:80 -d star-wars-app:v1
+```
+
+Access the Application in the Container. Open `127.0.0.1:8080/index.html` in your browser
