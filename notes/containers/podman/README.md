@@ -23,20 +23,20 @@
 
 Install Podman on a Debian-based Linux distribution:
 
-```bash
+```shell
 sudo apt-get update
 sudo apt-get -y install podman
 ```
 
 Verify the installation:
 
-```bash
+```shell
 podman --version
 ```
 
 Optional: Alias Podman as `docker` if you're used to Docker commands.
 
-```bash
+```shell
 alias docker='podman'
 ```
 
@@ -46,7 +46,7 @@ This allows you to use `docker` commands and run Podman in the background.
 
 ### View Podman Help
 
-```bash
+```shell
 podman --help
 ```
 
@@ -56,19 +56,19 @@ Shows a list of available commands and options.
 
 From Docker Hub:
 
-```bash
+```shell
 podman run hello-world
 ```
 
 From Quay.io (Podman's default registry):
 
-```bash
+```shell
 podman run quay.io/podman/hello
 ```
 
 ### View Local Images
 
-```bash
+```shell
 podman images
 ```
 
@@ -83,19 +83,19 @@ Images are fetched from container registries such as Docker Hub or Quay.io.
 
 Search on Docker Hub:
 
-```bash
+```shell
 podman search docker.io/nginx
 ```
 
 Search on Quay:
 
-```bash
+```shell
 podman search quay.io/nginx
 ```
 
 ### Pull Images
 
-```bash
+```shell
 # podman pull <image_name>
 podman pull docker.io/nginx:latest
 ```
@@ -104,7 +104,7 @@ podman pull docker.io/nginx:latest
 
 Pull and run the official `nginx` image:
 
-```bash
+```shell
 podman run docker.io/nginx
 ```
 
@@ -112,13 +112,13 @@ podman run docker.io/nginx
 
 Map a container port to a host port:
 
-```bash
+```shell
 podman run --publish <host_port>:<container_port> nginx
 ```
 
 Example:
 
-```bash
+```shell
 podman run -p 8080:80 nginx
 ```
 
@@ -128,13 +128,13 @@ The `-p` or `--publish` flag maps host and container ports.
 
 Run the container in the background (like a service):
 
-```bash
+```shell
 podman run -p 8080:80 -d nginx
 ```
 
 Or with long options:
 
-```bash
+```shell
 podman run --publish 8080:80 --detach nginx
 ```
 
@@ -142,13 +142,13 @@ podman run --publish 8080:80 --detach nginx
 
 Show logs of a running or exited container:
 
-```bash
+```shell
 podman logs <container_id | container_name>
 ```
 
 Follow logs in real time:
 
-```bash
+```shell
 podman logs -f <container_id | container_name>
 ```
 
@@ -156,7 +156,7 @@ podman logs -f <container_id | container_name>
 
 Naming your containers makes them easier to manage:
 
-```bash
+```shell
 podman run --name web -p 8080:80 -d nginx
 ```
 
@@ -164,57 +164,57 @@ podman run --name web -p 8080:80 -d nginx
 
 Run a command inside the container:
 
-```bash
+```shell
 podman exec <container_id | container_name> cat /etc/os-release
 ```
 
 Open an interactive shell inside the container:
 
-```bash
-podman exec -it <container_id | container_name> bash
+```shell
+podman exec -it <container_id | container_name> shell
 ```
 
 ### Manage Containers
 
 List running containers:
 
-```bash
+```shell
 podman ps
 ```
 
 List all containers (including stopped ones):
 
-```bash
+```shell
 podman ps -a
 ```
 
 Stop a container:
 
-```bash
+```shell
 podman stop <container_id | container_name>
 ```
 
 Start a stopped container:
 
-```bash
+```shell
 podman start <container_id | container_name>
 ```
 
 Remove a container:
 
-```bash
+```shell
 podman rm <container_id | container_name>
 ```
 
 Force remove a container (even if it's running):
 
-```bash
+```shell
 podman rm -f <container_id | container_name>
 ```
 
 Remove all containers:
 
-```bash
+```shell
 podman rm -f $(podman ps -aq)
 ```
 
@@ -222,25 +222,25 @@ podman rm -f $(podman ps -aq)
 
 List all images:
 
-```bash
+```shell
 podman images
 ```
 
 List only image IDs:
 
-```bash
+```shell
 podman images -q
 ```
 
 Remove a specific image:
 
-```bash
+```shell
 podman rmi <image_id | image_name>
 ```
 
 Remove all images:
 
-```bash
+```shell
 podman rmi $(podman images -q)
 ```
 
@@ -248,14 +248,20 @@ podman rmi $(podman images -q)
 
 You can pass environment variables when running containers:
 
-```bash
+```shell
 podman run -e ACCEPT_EULA=Y -e VAR_NAME=value <image_name>
 ```
 
 Example:
 
-```bash
+```shell
 podman run -e ACCEPT_EULA=Y -e SECRET_KEY=abc123 my-app-image
+```
+
+Inspect images
+
+```shell
+podman inspect <image_name>
 ```
 
 ## 3. Custom Images
