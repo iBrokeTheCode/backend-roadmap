@@ -1,1 +1,0 @@
-print('Cooking with Python')
