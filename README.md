@@ -176,9 +176,9 @@
 
 14. **Containerization & Deployment** (15 h)  
     14.1. **Docker Basics** (6 h)  
-    &nbsp;&nbsp;- [Docker](./notes/containers/docker/README.md)
-    &nbsp;&nbsp;- [Fundamentals](./notes/containers/docker/lesson-02.md)
-    &nbsp;&nbsp;- Images, containers, volumes, networks
+    &nbsp;&nbsp;- [Docker](./notes/containers/docker/README.md)  
+    &nbsp;&nbsp;- [Fundamentals](./notes/containers/docker/lesson-02.md)  
+    &nbsp;&nbsp;- Images, containers, volumes, networks  
     &nbsp;&nbsp;- [Podman](./notes/containers/podman/README.md)
 
     14.2. **Docker Compose** (4 h)  
