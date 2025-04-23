@@ -4,6 +4,7 @@
 
 - [Installation](#1-installation)
 - [Basic Commands](#2-basic-commands)
+- [Custom Images](#3-custom-images)
 
 ## Resources
 
@@ -70,6 +71,9 @@ podman run quay.io/podman/hello
 podman images
 ```
 
+> [!TIP]
+> You have to add images registries to avoid using `command docker.io/image`. For that, you have to add `unqualified-search-registries = ["docker.io", "quay.io"]` in the `/etc/containers/registries.conf`
+
 Lists all downloaded images.
 
 Images are fetched from container registries such as Docker Hub or Quay.io.
@@ -86,6 +90,13 @@ Search on Quay:
 
 ```bash
 podman search quay.io/nginx
+```
+
+### Pull Images
+
+```bash
+# podman pull <image_name>
+podman pull docker.io/nginx:latest
 ```
 
 ### Run a Web Server Container
@@ -246,35 +257,40 @@ Example:
 podman run -e ACCEPT_EULA=Y -e SECRET_KEY=abc123 my-app-image
 ```
 
----
-
-## Custom Images
+## 3. Custom Images
 
 Create a `Dockerfile` file or `Containerfile`. For instance
 
-```docker
+```dockerfile
 FROM nginx:latest
 WORKDIR /usr/share/nginx/html
 COPY ./site .
 EXPOSE 80
 ```
 
-> [!CAUTION]
-> Error: creating build container: short-name "nginx:latest" did not resolve to an alias and no unqualified-search registries are defined in "/etc/containers/registries.conf"
+> [!NOTE]
+> If you don't configure the `unqualified-search-registries`, you must to edit your Dockerfile/Containerfile with the source image registry `FROM docker.io/library/nginx:latest`
+
+---
 
 > [!IMPORTANT]
-> By default an error occurred if you don't have the `nginx` image and try to download (Error about registries) (FIX IT)
-> Review error about registries
 > Update this README
 > Docker extension for Podman
+
+---
 
 Build the docker image
 
 ```shell
+# podman build --tag <name>:<version>
 podman build -t star-wars-app:v1 .
 ```
 
-Verify the Built Image: Use the `podman images` command
+Verify the Built Image
+
+```shell
+podman images
+```
 
 Run a Container from the Custom Image
 
