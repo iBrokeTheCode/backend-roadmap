@@ -11,6 +11,7 @@
 - [Podman documentation](https://podman.io/docs)
 - [Quay](https://quay.io/)
 - [Docker Hub](https://hub.docker.com/search)
+- [Docker extension](https://marketplace.visualstudio.com/items/?itemName=ms-azuretools.vscode-docker)
 
 ## Core Concepts
 
@@ -270,14 +271,6 @@ EXPOSE 80
 
 > [!NOTE]
 > If you don't configure the `unqualified-search-registries`, you must to edit your Dockerfile/Containerfile with the source image registry `FROM docker.io/library/nginx:latest`
-
----
-
-> [!IMPORTANT]
-> Update this README
-> Docker extension for Podman
-
----
 
 Build the docker image
 
