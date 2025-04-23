@@ -186,6 +186,8 @@ Remove all images using a combined command. This command gets the IDs of all ima
 docker rmi $(docker images -q)
 ```
 
+## 3. Use Case
+
 Run a Microsoft SQL Server container, name it `db`, run detached, map local port 1433 to container port 1433, and set environment variables (`-e`) for EULA acceptance and the SA password. (Replace `<your_password>` with a strong password)
 
 ```bash
