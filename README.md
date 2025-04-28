@@ -76,8 +76,8 @@
 
 5. **ORM & Data Migrations** (12 h)
 
-   5.1. **Django**
-   &nbsp;&nbsp;-[Django Fundamentals](./notes/django/README.md)
+   5.1. **Django**  
+   &nbsp;&nbsp;- [Django Fundamentals](./notes/django/README.md)
 
    5.2. **Django ORM Fundamentals** (6 h)  
    &nbsp;&nbsp;- [ORM Deep Dive](https://github.com/ibrokethecode/orm-deep-dive?tab=readme-ov-file#orm-deep-dive-tutorial)  
