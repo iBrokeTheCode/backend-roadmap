@@ -1,8 +1,9 @@
 # Python Backend Developer Roadmap
 
-- Review a related [roadmap](./notes/roadmap/README.md)
+> [!TIP]
+> Review a related [roadmap](./notes/roadmap/README.md)
 
----
+## Roadmap
 
 1. **Foundations** (10 h)
 
@@ -75,17 +76,20 @@
 
 5. **ORM & Data Migrations** (12 h)
 
-   5.1. **Django ORM Fundamentals** (6 h)  
+   5.1. **Django**
+   &nbsp;&nbsp;-[Django Fundamentals](./notes/django/README.md)
+
+   5.2. **Django ORM Fundamentals** (6 h)  
    &nbsp;&nbsp;- [ORM Deep Dive](https://github.com/ibrokethecode/orm-deep-dive?tab=readme-ov-file#orm-deep-dive-tutorial)  
    &nbsp;&nbsp;- [Models, querysets, managers](https://github.com/iBrokeTheCode/orm-deep-dive/blob/main/notes/lesson-02.md)  
    &nbsp;&nbsp;- [M2M Relationships](https://github.com/iBrokeTheCode/orm-deep-dive/blob/main/notes/lesson-08.md) & [Foreign Keys](https://github.com/iBrokeTheCode/orm-deep-dive/blob/main/notes/lesson-03.md)  
    &nbsp;&nbsp;- [Lookups](https://github.com/iBrokeTheCode/orm-deep-dive/blob/main/notes/lesson-06.md)
 
-   5.2. **SQLModel & Alembic (FastAPI)** (4 h)  
+   5.3. **SQLModel & Alembic (FastAPI)** (4 h)  
    &nbsp;&nbsp;- Defining models  
    &nbsp;&nbsp;- Auto‑generating migrations
 
-   5.3. **Migrations & Seeding** (2 h)  
+   5.4. **Migrations & Seeding** (2 h)  
    &nbsp;&nbsp;- [`makemigrations`/`migrate`](https://github.com/iBrokeTheCode/orm-deep-dive/blob/main/notes/lesson-02.md)  
    &nbsp;&nbsp;- Fixtures & seed scripts
 
