@@ -46,16 +46,19 @@
 
 3. **Version Control** (8 h)
 
-   3.1. **Git Basics** (4 h)  
+   3.1. **Git Fundamentals**  
+   &nbsp;&nbsp;- [Git Fundamentals](https://github.com/ibrokethecode/git-tutorial)
+
+   3.2. **Git Basics** (4 h)  
    &nbsp;&nbsp;- [`git init`/`clone`/`add`/`commit`](https://github.com/ibrokethecode/git-tutorial?tab=readme-ov-file#-basic-commands)  
    &nbsp;&nbsp;- [Branching & merging](https://github.com/ibrokethecode/git-tutorial?tab=readme-ov-file#-branching)
 
-   3.2. **Remote Repos** (2 h)  
+   3.3. **Remote Repos** (2 h)  
    &nbsp;&nbsp;- [Git Flow](https://github.com/ibrokethecode/git-tutorial?tab=readme-ov-file#git-flow)  
    &nbsp;&nbsp;- [GitHub/GitLab workflows](https://github.com/ibrokethecode/git-tutorial?tab=readme-ov-file#github-flow)  
    &nbsp;&nbsp;- [Pull/Merge requests](https://github.com/ibrokethecode/git-tutorial?tab=readme-ov-file#-pull-requests-prs)
 
-   3.3. **Advanced Git** (2 h)  
+   3.4. **Advanced Git** (2 h)  
    &nbsp;&nbsp;- Rebasing & interactive rebase  
    &nbsp;&nbsp;- Hooks & submodules
 
