@@ -18,38 +18,16 @@
 
 - [x] Start with the default Django project structure containing `settings.py` in the project folder.
 - [x] Following the Hacksoft style guide, rename the main project folder to `config`.
-
----
-
-- Create two new directories inside the `config` folder: `django` and `settings`.
-- Update references to the old project name (e.g., `settings_demo`) in `urls.py`, `wsgi.py`, and `asgi.py` to point to the new `config` folder.
-
-  ```python
-  # In config/urls.py, config/wsgi.py, config/asgi.py (update if needed based on your default structure)
-  # Example for wsgi.py
-  import os
-
-  from django.core.wsgi import get_wsgi_application
-
-  # Change 'settings_demo.settings' to 'config.django.local' (or similar) - this will be updated later
-  os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'config.django.local')
-
-  application = get_wsgi_application()
-  ```
-
-- Move the `settings.py` file from the `config` directory into the `config/django` directory and rename it to `base.py`. This file now holds the base settings.
-- Create empty `__init__.py` files in both `config/django` and `config/settings` to make them Python packages.
-- Create environment-specific settings files inside `config/django`: `local.py`, `production.py`, and `test.py`.
-- In `local.py`, `production.py`, and `test.py`, import all settings from `base.py`.
+- [x] Create two new directories inside the `config` folder: `django` and `settings`.
+- [x] Update references to the old project name (e.g., `old_project_name`) in `urls.py`, `wsgi.py`, and `asgi.py` to point to the new `config` folder.
+- [x] Move the `settings.py` file from the `config` directory into the `config/django` directory and rename it to `base.py`. This file now holds the base settings.
+- [x] Create empty `__init__.py` files in both `config/django` and `config/settings` to make them Python packages.
+- [x] Create environment-specific settings files inside `config/django`: `local.py`, `production.py`, and `test.py`.
+- [x] In `local.py`, `production.py`, and `test.py`, import all settings from `base.py`.
 
   ```python
-  # In config/django/local.py, config/django/production.py, config/django/test.py
   from .base import *
-
-  # Add environment-specific settings below this line
   ```
-
----
 
 - Install the `django-environ` package.
   ```bash
