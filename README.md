@@ -100,7 +100,7 @@
    &nbsp;&nbsp;- Resources, verbs, status codes  
    &nbsp;&nbsp;- JSON schemas & validation
 
-   6.2. **Django REST Framework**
+   6.2. **Django REST Framework**  
    &nbsp;&nbsp;- [Django REST Framework Deep Dive](https://github.com/iBrokeTheCode/django-rest-framework)  
    &nbsp;&nbsp;- [Serializers](https://github.com/iBrokeTheCode/django-rest-framework/blob/main/notes/lesson-02.md) & [ModelViewSets, GenericViews](https://github.com/iBrokeTheCode/django-rest-framework/blob/main/notes/lesson-06.md)  
    &nbsp;&nbsp;- [Routers & URL conf](https://github.com/iBrokeTheCode/django-rest-framework/blob/main/notes/lesson-20.md)  
