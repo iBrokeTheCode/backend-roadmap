@@ -6,7 +6,8 @@
 - [Python Notes](https://github.com/iBrokeTheCode/python-roadmap)
 - [Git Notes](https://github.com/ibrokethecode/git-tutorial)
 - [Django Notes](./notes/django/README.md)
-- [ORM Notes](https://github.com/ibrokethecode/orm-deep-dive?tab=readme-ov-file#orm-deep-dive-tutorial)
+- [Django ORM Notes](https://github.com/ibrokethecode/orm-deep-dive?tab=readme-ov-file#orm-deep-dive-tutorial)
+- [Django REST Framework](https://github.com/iBrokeTheCode/django-rest-framework)
 
 ## Roadmap
 
@@ -101,7 +102,6 @@
    &nbsp;&nbsp;- JSON schemas & validation
 
    6.2. **Django REST Framework**  
-   &nbsp;&nbsp;- [Django REST Framework Deep Dive](https://github.com/iBrokeTheCode/django-rest-framework)  
    &nbsp;&nbsp;- [Serializers](https://github.com/iBrokeTheCode/django-rest-framework/blob/main/notes/lesson-02.md) & [ModelViewSets, GenericViews](https://github.com/iBrokeTheCode/django-rest-framework/blob/main/notes/lesson-06.md)  
    &nbsp;&nbsp;- [Routers & URL conf](https://github.com/iBrokeTheCode/django-rest-framework/blob/main/notes/lesson-20.md)  
    &nbsp;&nbsp;- [Browsable API](https://github.com/iBrokeTheCode/django-rest-framework/blob/main/notes/lesson-02.md) & [permissions](https://github.com/iBrokeTheCode/django-rest-framework/blob/main/notes/lesson-08.md)
