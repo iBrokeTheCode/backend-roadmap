@@ -75,7 +75,3 @@ You’ll see any `self.stdout.write(...)` outputs in your terminal.
 ## References
 
 - [Django docs – Custom commands](https://docs.djangoproject.com/en/stable/howto/custom-management-commands/)
-
-```
-
-```
