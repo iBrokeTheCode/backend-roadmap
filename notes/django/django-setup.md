@@ -16,8 +16,11 @@
 
 ## 2. Practical Steps
 
-- Start with the default Django project structure containing `settings.py` in the project folder.
-- Following the Hacksoft style guide, rename the main project folder (e.g., `settings_demo`) to `config`.
+- [x] Start with the default Django project structure containing `settings.py` in the project folder.
+- [x] Following the Hacksoft style guide, rename the main project folder to `config`.
+
+---
+
 - Create two new directories inside the `config` folder: `django` and `settings`.
 - Update references to the old project name (e.g., `settings_demo`) in `urls.py`, `wsgi.py`, and `asgi.py` to point to the new `config` folder.
 
