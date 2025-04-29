@@ -33,12 +33,13 @@
 
 ### 2.2. .env File and Django-environ
 
-- [x] Create a `.env` file in the project root location. Add your environment variables.
+- [x] Create a `.env` file at the project root. Define environment variables, including `DJANGO_SETTINGS_MODULE`.
 
   ```env
   DJANGO_SETTINGS_MODULE='config.django.local'
   DJANGO_DEBUG = True
   SECRET_KEY=secret
+  # Add other settings like database URL, API keys, etc.
   ```
 
 - [x] Install the `django-environ` package.
@@ -85,48 +86,36 @@
   ALLOWED_HOSTS = ["*"]
   ```
 
----
-
-- Define environment-specific settings in their respective files, often overriding or setting defaults differently than `base.py`.
+- [x] Define environment-specific settings in their respective files, often overriding or setting defaults differently than `base.py`.
 
   ```python
   # In config/django/production.py
-  from .base import *
-  from config.env import env # Import env object again if needed
+  from config.django.base import *
+  from config.env import env
 
   # Override settings for production
-  DEBUG = env('DJANGO_DEBUG', default=False) # Default DEBUG to False in production
-
+  # DEBUG = env.bool("DJANGO_DEBUG", default=False)  # type: ignore
+  DEBUG = False
   # Read ALLOWED_HOSTS from environment, defaulting to an empty list if not set
-  ALLOWED_HOSTS = env.list('ALLOWED_HOSTS', default=[])
+  ALLOWED_HOSTS = env.list("ALLOWED_HOSTS", default=[])
   ```
 
-- Create a `.env` file at the project root. Define environment variables, including `DJANGO_SETTINGS_MODULE`.
-  ```dotenv
-  # In .env at the project root
-  DJANGO_SETTINGS_MODULE=config.django.local
-  DJANGO_DEBUG=True
-  SECRET_KEY=secret # Replace with a real secret key
-  # Add other settings like database URL, API keys, etc.
-  ```
-- Update the `DJANGO_SETTINGS_MODULE` environment variable setting in `manage.py`, `wsgi.py`, and `asgi.py` to point to the desired default environment settings file (e.g., `config.django.local`).
+- [x] Update the `DJANGO_SETTINGS_MODULE` environment variable setting in `manage.py`, `wsgi.py`, and `asgi.py` to point to the desired default environment settings file (e.g., `config.django.local`).
 
   ```python
   # In manage.py, config/wsgi.py, config/asgi.py
-  import os
-  import sys
 
   # ...
-
   os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'config.django.local')
-
   # ...
   ```
 
-- Verify settings are loaded correctly by running `python manage.py shell` and inspecting `django.conf.settings`.
+- [x] Verify settings are loaded correctly by running `python manage.py shell` and inspecting `django.conf.settings`.
+
   ```bash
   python manage.py shell
   ```
+
   ```python
   # In the Django shell
   from django.conf import settings
@@ -134,7 +123,8 @@
   print(settings.DEBUG)
   print(settings.ALLOWED_HOSTS)
   ```
-- Demonstrate switching environments by changing the `DJANGO_SETTINGS_MODULE` environment variable in the terminal before running Django commands.
+
+- [x] Demonstrate switching environments by changing the `DJANGO_SETTINGS_MODULE` environment variable in the terminal before running Django commands.
   ```bash
   # On Linux/macOS
   export DJANGO_SETTINGS_MODULE=config.django.production
@@ -145,6 +135,13 @@
   $env:DJANGO_SETTINGS_MODULE="config.django.production"
   python manage.py shell
   ```
+
+---
+
+**(16:44)**
+
+### 2.3. Third-Party Configuration
+
 - Create files for third-party settings inside the `config/settings` directory (e.g., `celery.py`, `file_storage.py`).
 - In these third-party settings files, import the `env` object from `config.env` and define settings, reading values from the environment using `env`.
 
