@@ -21,25 +21,28 @@
 
 2. **Python Core** (40 h)
 
-   2.1. **Syntax, Data Types & Control Flow** (8 h)  
+   2.1. **Python Fundamentals**  
+   &nbsp;&nbsp; - [Python Roadmap](https://github.com/iBrokeTheCode/python-roadmap)
+
+   2.2. **Syntax, Data Types & Control Flow** (8 h)  
    &nbsp;&nbsp;- [Variables, numbers, strings, booleans](https://github.com/iBrokeTheCode/python-roadmap/blob/main/Fundamentals/Variables_Types_Operators.md)  
    &nbsp;&nbsp;- [Lists](https://github.com/iBrokeTheCode/python-roadmap/blob/main/Fundamentals/Lists/Lists.md), [tuples](https://github.com/iBrokeTheCode/python-roadmap/blob/main/Fundamentals/Tuples/Tuples.md), [sets](https://github.com/iBrokeTheCode/python-roadmap/blob/main/Fundamentals/Sets/Sets.md), [dicts](https://github.com/iBrokeTheCode/python-roadmap/blob/main/Fundamentals/Dicts/Dicts.md)  
    &nbsp;&nbsp;- [`if`/`elif`/`else`, loops (`for`/`while`)](https://github.com/iBrokeTheCode/python-roadmap/blob/main/Fundamentals/Control_Flow.md)
 
-   2.2. **Functions, Modules & Packages** (8 h)  
+   2.3. **Functions, Modules & Packages** (8 h)  
    &nbsp;&nbsp;- [Defining functions, args/kwargs](https://github.com/iBrokeTheCode/python-roadmap/blob/main/Fundamentals/Functions/Advanced_Functions.md)  
    &nbsp;&nbsp;- [`import` system, creating packages](https://github.com/iBrokeTheCode/python-roadmap/blob/main/Standard_Library_Modules/Modules_Packages/Modules_Packages.md)
 
-   2.3. **OOP in Python** (8 h)  
+   2.4. **OOP in Python** (8 h)  
    &nbsp;&nbsp;- [Classes, instances, methods](https://github.com/iBrokeTheCode/python-roadmap/blob/main/OOP/OOP_Pillars.md#1-classes--objects)  
    &nbsp;&nbsp;- [Inheritance, polymorphism, encapsulation](https://github.com/iBrokeTheCode/python-roadmap/blob/main/OOP/OOP_Pillars.md#3-encapsulation-inheritance-polymorphism-abstraction)
 
-   2.4. **Working with Files & Data** (8 h)  
+   2.5. **Working with Files & Data** (8 h)  
    &nbsp;&nbsp;- `pathlib` & [file I/O](https://github.com/iBrokeTheCode/python-roadmap/blob/main/Standard_Library_Modules/Files_IO/Files_IO.md)  
    &nbsp;&nbsp;- [JSON serialization/deserialization](https://github.com/iBrokeTheCode/python-roadmap/blob/main/Standard_Library_Modules/Core_Modules/JSON/JSON.md)  
    &nbsp;&nbsp;- [`argparse` for CLI scripts](https://github.com/iBrokeTheCode/python-roadmap/blob/main/Standard_Library_Modules/Core_Modules/Argparse/Argparse.md)
 
-   2.5. **Advanced Python Features** (8 h)  
+   2.6. **Advanced Python Features** (8 h)  
    &nbsp;&nbsp;- [List comprehension](https://github.com/iBrokeTheCode/python-roadmap/blob/main/Fundamentals/Lists/Lists.md#list-comprehension) & [Dict comprehension](https://github.com/iBrokeTheCode/python-roadmap/blob/main/Fundamentals/Dicts/Dicts.md#dictionary-comprehensions)  
    &nbsp;&nbsp;- [Generators & iterators](https://github.com/iBrokeTheCode/python-roadmap/blob/main/Advanced/Generators_and_Iterators/Generators_and_Iterators.md)  
    &nbsp;&nbsp;- [Context managers (`with`)](https://github.com/iBrokeTheCode/python-roadmap/blob/main/Advanced/Context_Managers/Context_Managers.md)
