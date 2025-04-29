@@ -16,6 +16,8 @@
 
 ## 2. Practical Steps
 
+### 2.1. Restructuring Settings
+
 - [x] Start with the default Django project structure containing `settings.py` in the project folder.
 - [x] Following the Hacksoft style guide, rename the main project folder to `config`.
 - [x] Create two new directories inside the `config` folder: `django` and `settings`.
@@ -29,52 +31,61 @@
   from .base import *
   ```
 
-- Install the `django-environ` package.
-  ```bash
-  pip install django-environ
+### 2.2. .env File and Django-environ
+
+- [x] Create a `.env` file in the project root location. Add your environment variables.
+
+  ```env
+  DJANGO_SETTINGS_MODULE='config.django.local'
+  DJANGO_DEBUG = True
+  SECRET_KEY=secret
   ```
-- Create an `env.py` file inside the `config` directory.
-- Add code to `config/env.py` to instantiate `django-environ`'s `Env` object and define `BASE_DIR`.
+
+- [x] Install the `django-environ` package.
+
+  ```shell
+  pip install django-environ
+
+  # uv or poetry
+  uv add django-environ
+  poetry add django-environ
+  ```
+
+- [x] Create an `env.py` file inside the `config` directory.
+- [x] Add code to `config/env.py` to instantiate `django-environ`'s `Env` object and define `BASE_DIR`.
 
   ```python
   # In config/env.py
-  import environ
-  from pathlib import Path
+    from pathlib import Path
 
-  BASE_DIR = Path(__file__).resolve().parent.parent
+    import environ
 
-  env = environ.Env()
+    BASE_DIR = Path(__file__).resolve().parent.parent
+    env = environ.Env()
   ```
 
-- In `config/django/base.py`, import the `env` object and `BASE_DIR` from `config.env`. Also, import the `os` module.
+- [x] In `config/django/base.py`, import the `env` object and `BASE_DIR` from `config.env`. Also, import the `os` module. Then, use the `env.read_env()` method to load values from a `.env` file.
+
   ```python
   # In config/django/base.py
   import os
   from config.env import env, BASE_DIR
-  ```
-- In `config/django/base.py`, use the `env.read_env()` method to load values from a `.env` file.
 
-  ```python
-  # In config/django/base.py
-  # ... imports ...
   # Read the .env file
   env.read_env(os.path.join(BASE_DIR, '.env'))
-
-  # ... rest of the base settings ...
   ```
 
-- Modify settings in `base.py` to read values from environment variables using the `env` object. Provide appropriate casting and default values.
+- [x] Modify settings in `base.py` to read values from environment variables using the `env` object. Provide appropriate casting and default values.
 
   ```python
   # In config/django/base.py
-  # ... imports and env.read_env() ...
 
-  SECRET_KEY = env('SECRET_KEY') # Read SECRET_KEY from environment
-
-  DEBUG = env('DJANGO_DEBUG', default=True) # Read DJANGO_DEBUG, default to True
-
-  ALLOWED_HOSTS = env('ALLOWED_HOSTS', default='*').split(',') # Example: read ALLOWED_HOSTS as string, split into list
+  SECRET_KEY = env("SECRET_KEY") # Read SECRET_KEY from environment
+  DEBUG = env.bool("DJANGO_DEBUG", default=True)  # type:  ignore
+  ALLOWED_HOSTS = ["*"]
   ```
+
+---
 
 - Define environment-specific settings in their respective files, often overriding or setting defaults differently than `base.py`.
 
