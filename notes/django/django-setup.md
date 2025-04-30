@@ -14,9 +14,11 @@
 - **Third-Party Settings** Configurations for external services (like Celery, Sentry, AWS, email providers) are separated into their own files within the `config/settings` directory. These files are then imported into `base.py`.
 - **`.env.example` File** A non-sensitive file committed to version control that shows developers the expected environment variables required by the project, often with dummy values.
 
-## 2. Practical Steps
+## 2. Resources
 
-### 2.1. Restructuring Settings
+## 3. Practical Steps
+
+### 3.1. Restructuring Settings
 
 - [x] Start with the default Django project structure containing `settings.py` in the project folder.
 - [x] Following the Hacksoft style guide, rename the main project folder to `config`.
@@ -31,7 +33,7 @@
   from config.django.base import *
   ```
 
-### 2.2. .env File and Django-environ
+### 3.2. .env File and Django-environ
 
 - [x] Create a `.env` file at the project root. Define environment variables, including `DJANGO_SETTINGS_MODULE`.
 
@@ -137,14 +139,10 @@
   python manage.py shell
   ```
 
----
+### 3.3. Third-Party Configuration
 
-**(16:44)**
-
-### 2.3. Third-Party Configuration
-
-- Create files for third-party settings inside the `config/settings` directory (e.g., `celery.py`, `file_storage.py`).
-- In these third-party settings files, import the `env` object from `config.env` and define settings, reading values from the environment using `env`.
+- [x] Create files for third-party settings inside the `config/settings` directory (e.g., `celery.py`, `file_storage.py`).
+- [x] In these third-party settings files, import the `env` object from `config.env` and define settings, **reading values from the environment using `env`.**
 
   ```python
   # In config/settings/celery.py
@@ -179,16 +177,15 @@
   # Add other S3 related settings if necessary
   ```
 
-- In `config/django/base.py`, import all settings from the third-party settings files created in the previous step.
+- [x] In `config/django/base.py`, import all settings from the third-party settings files created in the previous step.
 
   ```python
   # In config/django/base.py (at the bottom)
   # ... other base settings ...
 
   # Import third-party settings
-  from .settings.celery import * # Assumes celery.py exists in config/settings
-  from .settings.file_storage import * # Assumes file_storage.py exists in config/settings
-  # Import other third-party settings files here
+  from .settings.celery import *
+  from .settings.file_storage import *
   ```
 
 - Create an `.env.example` file at the project root. Copy the structure of your `.env` file but replace sensitive values with dummy or placeholder values. Commit this file to version control.
