@@ -21,14 +21,14 @@
 - [x] Start with the default Django project structure containing `settings.py` in the project folder.
 - [x] Following the Hacksoft style guide, rename the main project folder to `config`.
 - [x] Create two new directories inside the `config` folder: `django` and `settings`.
-- [x] Update references to the old project name (e.g., `old_project_name`) in `urls.py`, `wsgi.py`, and `asgi.py` to point to the new `config` folder.
+- [x] Update references to the old project name (e.g., `old_project_name`) in `urls.py`, `wsgi.py`, `asgi.py` and `settings.py` to point to the new `config` folder.
 - [x] Move the `settings.py` file from the `config` directory into the `config/django` directory and rename it to `base.py`. This file now holds the base settings.
 - [x] Create empty `__init__.py` files in both `config/django` and `config/settings` to make them Python packages.
 - [x] Create environment-specific settings files inside `config/django`: `local.py`, `production.py`, and `test.py`.
 - [x] In `local.py`, `production.py`, and `test.py`, import all settings from `base.py`.
 
   ```python
-  from .base import *
+  from config.django.base import *
   ```
 
 ### 2.2. .env File and Django-environ
@@ -74,6 +74,7 @@
 
   # Read the .env file
   env.read_env(os.path.join(BASE_DIR, '.env'))
+  # env.read_env(BASE_DIR / ".env") # MODERN WAY
   ```
 
 - [x] Modify settings in `base.py` to read values from environment variables using the `env` object. Provide appropriate casting and default values.
