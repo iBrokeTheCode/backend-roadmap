@@ -25,8 +25,7 @@
 
 **Overview**
 
-> [!TIP]
-> **Overview**
+> [!TIP] > **Overview**
 >
 > - **Restructure your settings files** by renaming the default project settings folder (e.g., `settings_demo`) to `config`.
 > - Within the new `config` directory, create two subdirectories: one named `django` for Django-specific settings and one named `settings` for third-party application settings.
@@ -214,7 +213,7 @@
   from .settings.file_storage import *
   ```
 
-- Create an `.env.example` file at the project root. Copy the structure of your `.env` file but replace sensitive values with dummy or placeholder values. Commit this file to version control.
+- [x] Create an `.env.example` file at the project root. Copy the structure of your `.env` file but replace sensitive values with dummy or placeholder values. Commit this file to version control.
 
   ```dotenv
   # In .env.example at the project root
@@ -238,4 +237,4 @@
   AWS_S3_REGION_NAME=your-aws-region
   ```
 
-- Add the `.env` file to your project's `.gitignore` file to prevent it from being committed to version control.
+- [x] Add the `.env` file to your project's `.gitignore` file to prevent it from being committed to version control.
