@@ -16,7 +16,32 @@
 
 ## 2. Resources
 
+- [Environment-based Settings in Django Projects | django-environ | Setup for local/production/testing](https://youtu.be/O4IIBOGFyWI?si=gqDejfxt6Lj0toxm) - In this video, we'll look at how to setup Django for multiple environments, such as local development, production, and testing.
+- [Django-Styleguide](https://github.com/HackSoftware/Django-Styleguide) - Django styleguide used in HackSoft projects
+- [Django settings](https://docs.djangoproject.com/en/5.0/topics/settings/) - A Django settings file contains all the configuration of your Django installation. This document explains how settings work and which settings are available.
+- [django-environ](https://django-environ.readthedocs.io/en/latest/) - django-environ is the Python package that allows you to use Twelve-factor methodology to configure your Django application with environment variables.
+
 ## 3. Practical Steps
+
+**Overview**
+
+> [!TIP]
+>
+> - **Restructure your settings files** by renaming the default project settings folder (e.g., `settings_demo`) to `config`.
+> - Within the new `config` directory, create two subdirectories: one named `django` for Django-specific settings and one named `settings` for third-party application settings.
+> - Inside the `config/django` directory, create environment-specific settings files such as **`base.py`**, **`local.py`**, **`production.py`**, and **`test.py`**.
+> - Move all the default settings from the original `settings.py` into **`base.py`**.
+> - In the environment-specific files (`local.py`, `production.py`, `test.py`), **import all settings from `base.py`**.
+> - In the environment-specific files, **override only the settings that need to be different** for that specific environment (e.g., set `DEBUG = False` in `production.py`).
+> - Create a **`.env` file** at the root of your project to store configuration values like `SECRET_KEY`, `DJANGO_DEBUG`, or external service credentials, which vary between environments.
+> - Install the **`django-environ`** package (`pip install django-environ`) to read values from the `.env` file into your Django settings.
+> - Create an **`env.py` file** (e.g., within the `config` directory) to instantiate the `django-environ` `Env` object and handle reading the `.env` file and defining the base directory.
+> - **Import the `env` object** from `config.env` into your settings files (like `base.py` and `production.py`) to access environment variables.
+> - Use the imported `env` object (e.g., `env('SECRET_KEY')`, `env.bool('DJANGO_DEBUG', default=True)`) to **read configuration values from the environment**, which are populated by `django-environ` from the `.env` file.
+> - For third-party application settings (e.g., Celery, AWS S3), create separate files (e.g., `celery.py`, `file_storage.py`) within the `config/settings` directory.
+> - **Import these third-party settings files** into the `base.py` file so they are available in all environments.
+> - Update `manage.py`, `wsgi.py`, and `asgi.py` to **control which settings file is loaded using the `DJANGO_SETTINGS_MODULE` environment variable**, pointing it to the appropriate file (e.g., `config.django.local`, `config.django.production`).
+> - As a best practice, create an **`.env.example` file** to document the expected environment variables for other developers without including sensitive information.
 
 ### 3.1. Restructuring Settings
 
