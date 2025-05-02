@@ -7,18 +7,35 @@
 - [Custom Management Commands](./custom-management-commands.md)
 - [Media Files](./media_files.md)
 - [Django Setup](./django-setup.md)
+- [Django Testing](./django-testisng/README.md)
 
 ## Prompt
 
 ```txt
-Generate a README file (Markdown format) summarizing the key concepts of the source video. Include the following sections:
+Analyze the YouTube tutorial transcript and generate a Markdown README file as learning notes, following this format:
 
-Introduction: A brief overview of the video's topic. (don't add numeration for this section)
-1. Core Concepts: Explain the main functionalities and principles discussed.
-2. Practical Steps: Provide a step-by-step guide for the practical application of the concepts in the video. For each step, clearly explain the action and include the corresponding code block (if any) directly after the step description. (not required to put "action" or "code" subtitle)
+# [Tutorial Title]
 
-Both sections should be headings (markdown format)
+## Introduction
+[1 paragraph summary of topic and learning objectives.]
 
-Refer to the source as "lesson", for example: "In this lesson ..."
+## 1. Core Concepts
+[Descriptive headings for each concept with concise explanations and key terms.]
 
+## 2. Resources
+[Leave empty for manual links.]
+
+## 3. Practical Steps: Hands-on Guide
+[Numbered, clear, and actionable step-by-step guide for practical examples with code blocks.]
+
+**Key Instructions:**
+
+* Accurately summarize core concepts and practical steps.
+* Use clear, concise language, defining technical terms in 'Core Concepts'.
+* Ensure 'Practical Steps' are detailed and reproducible.
+* Strictly adhere to the specified Markdown format and headings.
+* Use code blocks for code/commands.
+* Emphasize key terms with bold text.
+
+Generate the README based on the transcript.
 ```
