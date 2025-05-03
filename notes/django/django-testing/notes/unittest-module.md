@@ -40,6 +40,7 @@ Django's testing framework is built upon **`unittest`**. Django provides its own
 
 - [Testing in Django Tutorial #3 - The Python unittest Module](https://youtu.be/Ob25drPBgu0?si=-5MQTcXMDwO1hBEa)
 - [Unittest - Unit Testing Framework](https://docs.python.org/3/library/unittest.html)
+- [Unittest Module](../unittest-module/)
 
 ## 3. Practical Steps: Hands-on Guide
 
