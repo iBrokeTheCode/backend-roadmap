@@ -72,39 +72,40 @@ When testing Django models, the focus should be on custom **business logic**, **
     - Create a custom **`User`** model extending Django's built-in **`AbstractUser`** in your `models.py` file.
     - Define a **`Product`** model inheriting from `models.Model`.
     - Add fields to the `Product` model:
+
       - `name = models.CharField(max_length=128)`
       - `price = models.DecimalField(max_digits=10, decimal_places=2)`
       - `stock_count = models.IntegerField(default=0)`
 
-    ```python
-    # In your app's models.py
-    from django.db import models
-    from django.contrib.auth.models import AbstractUser
-    from django.core.exceptions import ValidationError
+        ```python
+        # In your app's models.py
+        from django.db import models
+        from django.contrib.auth.models import AbstractUser
+        from django.core.exceptions import ValidationError
 
-    class User(AbstractUser):
-        # Add custom fields here if needed
-        pass
+        class User(AbstractUser):
+            # Add custom fields here if needed
+            pass
 
-    class Product(models.Model):
-        name = models.CharField(max_length=128)
-        price = models.DecimalField(max_digits=10, decimal_places=2)
-        stock_count = models.IntegerField(default=0)
+        class Product(models.Model):
+            name = models.CharField(max_length=128)
+            price = models.DecimalField(max_digits=10, decimal_places=2)
+            stock_count = models.IntegerField(default=0)
 
-        def clean(self):
-            if self.price < 0:
-                raise ValidationError("Price cannot be negative")
-            if self.stock_count < 0:
-                raise ValidationError("Stock count cannot be negative")
+            def clean(self):
+                if self.price < 0:
+                    raise ValidationError("Price cannot be negative")
+                if self.stock_count < 0:
+                    raise ValidationError("Stock count cannot be negative")
 
-        @property
-        def in_stock(self):
-            return self.stock_count > 0
+            @property
+            def in_stock(self):
+                return self.stock_count > 0
 
-        def get_discounted_price(self, discount_percentage):
-            return self.price * (1 - discount_percentage / 100)
+            def get_discounted_price(self, discount_percentage):
+                return self.price * (1 - discount_percentage / 100)
 
-    ```
+        ```
 
     - Implement **validation logic** using the **`clean`** method to check that `price` and `stock_count` are not negative, raising a **`ValidationError`** if they are.
     - Define a **model property** (e.g., **`in_stock`**) using the **`@property`** decorator to return a boolean indicating if stock is greater than zero.
@@ -115,22 +116,24 @@ When testing Django models, the focus should be on custom **business logic**, **
     - Go to your project's `settings.py` file.
     - Add or modify the **`AUTH_USER_MODEL`** setting to point to your custom User model (e.g., `'products.User'`).
 
-    ```python
-    # In your project's settings.py
-    AUTH_USER_MODEL = 'products.User'
-    ```
+      ```python
+      # In your project's settings.py
+      AUTH_USER_MODEL = 'products.User'
+      ```
 
 3.  **Run Migrations**:
 
     - Open your terminal or command prompt.
     - Navigate to your project's root directory.
-    - Run **`python manage.py make migrations`** to create migration files for your new models.
+    - Run **`python manage.py makemigrations`** to create migration files for your new models.
     - Run **`python manage.py migrate`** to apply the migrations and create the database tables. This will also create the test database when tests are run.
 
-    ```bash
-    python manage.py make migrations
-    python manage.py migrate
-    ```
+      ```bash
+      python manage.py makemigrations
+      python manage.py migrate
+      ```
+
+---
 
 4.  **Set up the Test Directory**:
 
