@@ -169,7 +169,7 @@
 
 8.  **Write Test for Invalid Form Submission**:
 
-    - Add a method (e.g., `test_don't_create_product_when_invalid`) to `ProductFormTest`.
+    - Add a method (e.g., `test_dont_create_product_when_invalid`) to `ProductFormTest`.
     - Define a dictionary `form_data` with invalid data (e.g., missing name, negative price, negative stock count).
     - Simulate a POST request using `self.client.post()` to the products URL, passing the `form_data`. Get the `response` object.
     - Assert that the response status code is 200 (staying on the page to show errors) using `self.assertEqual(response.status_code, 200)`.
