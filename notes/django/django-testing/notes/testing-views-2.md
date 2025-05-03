@@ -85,8 +85,8 @@
         # setup method runs before each test method
         def setUp(self):
             # Create test data in the database
-            Product.objects.create(name='Laptop', price=1000, stock=5) # Add stock as needed based on model constraints
-            Product.objects.create(name='Phone', price=800, stock=10)
+            Product.objects.create(name='Laptop', price=1000, stock_count=5) # Add stock as needed based on model constraints
+            Product.objects.create(name='Phone', price=800, stock_count=10)
     ```
 
     The `setUp` method creates two `Product` objects before every test in this class, providing data for testing.
