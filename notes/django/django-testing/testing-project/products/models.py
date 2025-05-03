@@ -25,4 +25,4 @@ class Product(models.Model):
             raise ValidationError('Stock Count cannot be negative')
 
     def get_discounted_price(self, discount_percentage: int) -> Decimal:
-        return self.price * Decimal(1 - discount_percentage / 100)
+        return Decimal(self.price) * (1 - Decimal(discount_percentage) / Decimal(100))

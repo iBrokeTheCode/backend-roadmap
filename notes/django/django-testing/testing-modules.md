@@ -133,8 +133,6 @@ When testing Django models, the focus should be on custom **business logic**, **
       python manage.py migrate
       ```
 
----
-
 4.  **Set up the Test Directory**:
 
     - Within your Django app directory (e.g., `products`), create a new folder named **`tests`**.
@@ -148,62 +146,62 @@ When testing Django models, the focus should be on custom **business logic**, **
     - Create a test class that inherits from **`TestCase`** (e.g., **`ProductModelTest`**).
     - Define a **`setUp`** method within the class to create a **`Product`** instance that can be accessed by all test methods using `self.product`.
 
-    ```python
-    # In your app's tests/test_models.py
-    from django.test import TestCase
-    from django.core.exceptions import ValidationError
-    from products.models import Product # Adjust import path if needed
+      ```python
+      # In your app's tests/test_models.py
+      from django.test import TestCase
+      from django.core.exceptions import ValidationError
+      from products.models import Product # Adjust import path if needed
 
-    class ProductModelTest(TestCase):
+      class ProductModelTest(TestCase):
 
-        def setUp(self):
-            self.product = Product.objects.create(
-                name="Test Product",
-                price=100.00,
-                stock_count=10
-            )
-    ```
+          def setUp(self):
+              self.product = Product.objects.create(
+                  name="Test Product",
+                  price=100.00,
+                  stock_count=10
+              )
+      ```
 
     - Write test methods (starting with `test_`) for each piece of functionality you want to verify.
     - **Test the `@property`**: Use **`assertTrue`** and **`assertFalse`** to check the **`in_stock`** property under different stock counts.
 
-    ```python
-        def test_in_stock_property(self):
-            # Test when stock > 0
-            self.assertTrue(self.product.in_stock) # stock_count is 10 in setUp
+      ```python
+          def test_in_stock_property(self):
+              # Test when stock > 0
+              self.assertTrue(self.product.in_stock) # stock_count is 10 in setUp
 
-            # Test when stock == 0
-            self.product.stock_count = 0
-            self.assertFalse(self.product.in_stock)
-    ```
+              # Test when stock == 0
+              self.product.stock_count = 0
+              self.assertFalse(self.product.in_stock)
+      ```
 
     - **Test the model method**: Use **`assertEqual`** to check if **`get_discounted_price`** returns the correct value for different discount percentages, including edge cases like 0%.
 
-    ```python
-        def test_get_discounted_price(self):
-            # Test 10% discount
-            self.assertEqual(self.product.get_discounted_price(10), 90.00)
+      ```python
+          def test_get_discounted_price(self):
+              # Test 10% discount
+              self.assertEqual(self.product.get_discounted_price(10), 90.00)
 
-            # Test 50% discount
-            self.assertEqual(self.product.get_discounted_price(50), 50.00)
+              # Test 50% discount
+              self.assertEqual(self.product.get_discounted_price(50), 50.00)
 
-            # Test 0% discount (edge case)
-            self.assertEqual(self.product.get_discounted_price(0), 100.00)
-    ```
+              # Test 0% discount (edge case)
+              self.assertEqual(self.product.get_discounted_price(0), 100.00)
+      ```
 
     - **Test validation logic**: Use the **`assertRaises`** context manager to check that calling the **`clean`** method raises a **`ValidationError`** when `price` or `stock_count` is negative.
 
-    ```python
-        def test_negative_price_validation(self):
-            self.product.price = -10.00
-            with self.assertRaises(ValidationError):
-                self.product.clean()
+      ```python
+          def test_negative_price_validation(self):
+              self.product.price = -10.00
+              with self.assertRaises(ValidationError):
+                  self.product.clean()
 
-        def test_negative_stock_count_validation(self):
-            self.product.stock_count = -10
-            with self.assertRaises(ValidationError):
-                self.product.clean()
-    ```
+          def test_negative_stock_count_validation(self):
+              self.product.stock_count = -10
+              with self.assertRaises(ValidationError):
+                  self.product.clean()
+      ```
 
 6.  **Run Your Tests**:
 
@@ -212,6 +210,8 @@ When testing Django models, the focus should be on custom **business logic**, **
     - Run the command **`python manage.py test`**.
     - Observe the output to see if tests pass (`OK`) or fail.
 
-    ```bash
-    python manage.py test
-    ```
+      ```bash
+      python manage.py test
+      # Run verbose mode
+      python manage.py test -v 0 # {0, 1, 2, 3} - 1 it's the default value
+      ```
