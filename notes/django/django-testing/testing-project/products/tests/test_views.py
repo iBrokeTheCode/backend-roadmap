@@ -1,5 +1,8 @@
+from unittest.mock import patch
+
 from django.test import SimpleTestCase, TestCase
 from django.urls import reverse, reverse_lazy
+from requests.exceptions import RequestException
 
 from products.models import Product, User
 
@@ -83,3 +86,51 @@ class TestProfilePage(TestCase):
 
         response = self.client.get(self.profile_url)
         self.assertContains(response, 'username')
+
+
+class TestGetPostView(TestCase):
+    @classmethod
+    def setUpTestData(cls):
+        """Set up test data for the test suite."""
+        cls.post_url = reverse('products:get-post')  # URL for the view being tested.
+        cls.endpoint_url = (
+            'https://jsonplaceholder.typicode.com/posts/1'  # Mocked external API URL.
+        )
+
+    @patch('products.views.requests.get')
+    def test_post_view_success(self, mock_get):
+        """Test the 'get-post' view for a successful API call."""
+        mock_get.return_value.status_code = 200  # Mock API response status code.
+        return_data = {
+            'userId': 1,
+            'id': 1,
+            'title': 'Test Title',
+            'body': 'Test Body',
+        }  # Mock API response data.
+        mock_get.return_value.json.return_value = return_data  # Mock API response JSON.
+
+        response = self.client.get(self.post_url)  # Send GET request to the view.
+        self.assertEqual(
+            response.status_code, 200
+        )  # Assert response status code is 200.
+        self.assertJSONEqual(
+            response.content, return_data
+        )  # Assert response JSON matches mocked data.
+
+        mock_get.assert_called_once_with(
+            self.endpoint_url
+        )  # Verify API was called once with correct URL.
+
+    @patch('products.views.requests.get')
+    def test_post_view_fail(self, mock_get):
+        """Test the 'get-post' view for a failed API call."""
+        mock_get.side_effect = RequestException  # Mock API call to raise an exception.
+        response = self.client.get(self.post_url)  # Send GET request to the view.
+
+        self.assertEqual(
+            response.status_code, 503
+        )  # Assert response status code is 503.
+
+        mock_get.assert_called_once_with(
+            self.endpoint_url
+        )  # Verify API was called once with correct URL.

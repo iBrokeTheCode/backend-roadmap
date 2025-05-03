@@ -78,7 +78,7 @@
     ```python
     # tests/test_views.py
     from django.test import TestCase, Client
-    from unittest.mock import patch, MagicMock # Import patch and other mock tools
+    from unittest.mock import patch # Import patch
     # No need to import requests directly in test if mocking
     from django.urls import reverse # To get URL by name
 
@@ -86,8 +86,9 @@
     # Adjust path if your app name is different
 
     class PostViewTest(TestCase): # Inherit from TestCase
-        def setUp(self):
-            self.client = Client() # Django test client
+        @classmethod
+        def setUpTestData(cls):
+            cls.post_url = 'products:get-post'
 
         # Test methods will go here
     ```
@@ -100,37 +101,38 @@
 
     # ... imports and PostViewTest class
 
-    class PostViewTest(TestCase):
-        # ... setUp method
+    class TestGetPostView(TestCase):
+        @classmethod
+        def setUpTestData(cls):
+            """Set up test data for the test suite."""
+            cls.post_url = reverse('products:get-post')  # URL for the view being tested.
+            cls.endpoint_url = (
+                'https://jsonplaceholder.typicode.com/posts/1'  # Mocked external API URL.
+            )
 
-        @patch('products.views.requests.get') # Patch requests.get where it is used in views
-        def test_post_view_success(self, mock_get): # The mock object is passed as an argument
-            # Configure the mock to simulate a successful response
-            mock_response = MagicMock() # Or just use the mock_get object directly
-            mock_response.status_code = 200 # Set status code attribute
-            # Define the data the mocked API should return
+        @patch('products.views.requests.get')
+        def test_post_view_success(self, mock_get):
+            """Test the 'get-post' view for a successful API call."""
+            mock_get.return_value.status_code = 200  # Mock API response status code.
             return_data = {
-                "userId": 1,
-                "id": 1,
-                "title": "mock title",
-                "body": "mock body"
-            }
-            # Configure the mock's .json() method to return the desired data
-            mock_response.json.return_value = return_data
-            # Configure the mock_get object to return the mock_response when called
-            mock_get.return_value = mock_response
+                'userId': 1,
+                'id': 1,
+                'title': 'Test Title',
+                'body': 'Test Body',
+            }  # Mock API response data.
+            mock_get.return_value.json.return_value = return_data  # Mock API response JSON.
 
-            # Send a request to the Django view using the test client
-            url = reverse('post') # Get URL for the 'post' view
-            response = self.client.get(url)
+            response = self.client.get(self.post_url)  # Send GET request to the view.
+            self.assertEqual(
+                response.status_code, 200
+            )  # Assert response status code is 200.
+            self.assertJSONEqual(
+                response.content, return_data
+            )  # Assert response JSON matches mocked data.
 
-            # Assert the response from the Django view
-            self.assertEqual(response.status_code, 200) # Check HTTP status code
-            self.assertJsonEqual(response.content, return_data) # Check JSON content
-
-            # Assert that the mocked requests.get was called correctly
-            expected_url = "https://jsonplaceholder.typicode.com/posts/1"
-            mock_get.assert_called_once_with(expected_url) # Check it was called once with the correct URL
+            mock_get.assert_called_once_with(
+                self.endpoint_url
+            )  # Verify API was called once with correct URL.
     ```
 
 6.  **Write a Test for Failure Condition:**
@@ -144,23 +146,19 @@
     class PostViewTest(TestCase):
         # ... setUp and success test methods
 
-        @patch('products.views.requests.get') # Patch requests.get again
-        def test_post_view_fail(self, mock_get): # Mock object argument
-            # Configure the mock to simulate an exception
-            mock_get.side_effect = requests.exceptions.RequestException # Make the mock raise RequestException when called
+        @patch('products.views.requests.get')
+        def test_post_view_fail(self, mock_get):
+            """Test the 'get-post' view for a failed API call."""
+            mock_get.side_effect = RequestException  # Mock API call to raise an exception.
+            response = self.client.get(self.post_url)  # Send GET request to the view.
 
-            # Send a request to the Django view
-            url = reverse('post')
-            response = self.client.get(url)
+            self.assertEqual(
+                response.status_code, 503
+            )  # Assert response status code is 503.
 
-            # Assert the response from the Django view (should return 503 from the except block)
-            self.assertEqual(response.status_code, 503) # Check for 503 status code
-            # Optionally, check the content: self.assertEqual(response.content.decode(), "Service unavailable")
-
-            # Assert that the mocked requests.get was called correctly even on failure
-            expected_url = "https://jsonplaceholder.typicode.com/posts/1"
-            mock_get.assert_called_once_with(expected_url) # Check it was called once with the correct URL
-
+            mock_get.assert_called_once_with(
+                self.endpoint_url
+            )  # Verify API was called once with correct URL.
     ```
 
 7.  **Run the Tests:**

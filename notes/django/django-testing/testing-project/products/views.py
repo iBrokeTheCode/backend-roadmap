@@ -37,8 +37,8 @@ def login_view(request):
     return render(request, 'products/login.html')
 
 
-def get_user(request):
-    url = 'https://jsonplaceholder.typicode.com/users/1'
+def get_post(request):
+    url = 'https://jsonplaceholder.typicode.com/posts/1'
 
     try:
         response = requests.get(url)
