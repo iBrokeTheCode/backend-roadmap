@@ -1,5 +1,8 @@
+import requests
 from django.contrib.auth.decorators import login_required
+from django.http import HttpResponse, JsonResponse
 from django.shortcuts import redirect, render
+from requests.exceptions import RequestException
 
 from products.forms import ProductForm
 from products.models import Product
@@ -32,3 +35,16 @@ def profile_view(request):
 
 def login_view(request):
     return render(request, 'products/login.html')
+
+
+def get_user(request):
+    url = 'https://jsonplaceholder.typicode.com/users/1'
+
+    try:
+        response = requests.get(url)
+        response.raise_for_status()
+
+        data = response.json()
+        return JsonResponse(data)
+    except RequestException:
+        return HttpResponse('Service unavailable', status=503)
