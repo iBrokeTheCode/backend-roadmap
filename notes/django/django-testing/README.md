@@ -9,3 +9,4 @@
 5. [Testing Database Constraints](./notes/database-constraints.md) - Enhances data integrity in Django applications by implementing and testing **database constraints**.
 6. [TestCase](./notes/test-case.md) - Focus is on understanding how `TestCase` uses atomic transactions and how to leverage the **`setup_test_data`** class method as a performance enhancement compared to the standard `setup` method
 7. [Testing Views (part 1)](./notes/testing-views-1.md) - Understand how to write and test simple views that serve static HTML content without requiring database access, utilizing Django's testing tools like `SimpleTestCase` and the test client.
+8. [Testing Views (part 2)](./notes/testing-views-2.md) - Write tests for views that retrieve data from models, add it to the template **context**, and display it.
