@@ -1,3 +1,4 @@
+from django.contrib.auth.decorators import login_required
 from django.shortcuts import redirect, render
 
 from products.forms import ProductForm
@@ -22,3 +23,12 @@ def product_list(request):
     context = {'products': Product.objects.all(), 'form': ProductForm()}
 
     return render(request, 'products/product_list.html', context)
+
+
+@login_required()
+def profile_view(request):
+    return render(request, 'products/profile.html')
+
+
+def login_view(request):
+    return render(request, 'products/login.html')

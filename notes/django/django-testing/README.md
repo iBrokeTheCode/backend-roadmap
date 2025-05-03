@@ -11,3 +11,4 @@
 7. [Testing Views (part 1)](./notes/testing-views-1.md) - Understand how to write and test simple views that serve static HTML content without requiring database access, utilizing Django's testing tools like `SimpleTestCase` and the test client.
 8. [Testing Views (part 2)](./notes/testing-views-2.md) - Write tests for views that retrieve data from models, add it to the template **context**, and display it.
 9. [Testing Forms](./notes/testing-forms.md) - Covers creating a **Model Form** tied to a database model, adding **field-level validation** to the form, and integrating this form into a Django view to handle both GET and POST requests.
+10. [Testing Authentication](./notes/testing-authentication.md) - Write tests to verify that protected pages are only accessible to authenticated users and that unauthenticated users attempting to access them are correctly redirected
