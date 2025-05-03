@@ -3,11 +3,13 @@
 ## Related Resources
 
 - [Suggested Roadmap](./notes/roadmap/README.md)
+- [Prompts](./notes/prompts/)
 - [Python Notes](https://github.com/iBrokeTheCode/python-roadmap)
 - [Git Notes](https://github.com/ibrokethecode/git-tutorial)
 - [Django Notes](./notes/django/README.md)
 - [Django ORM Notes](https://github.com/ibrokethecode/orm-deep-dive?tab=readme-ov-file#orm-deep-dive-tutorial)
 - [Django REST Framework](https://github.com/iBrokeTheCode/django-rest-framework)
+- [FastAPI Notes](https://github.com/iBrokeTheCode/fastapi-course)
 
 ## Roadmap
 
