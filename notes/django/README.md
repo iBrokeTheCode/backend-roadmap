@@ -1,10 +1,7 @@
-# Django Fundamentals
+# Django
 
 ## Table of Contents
 
-- [Class Based Views](./class-based-views.md)
-- [Context Managers](./context-managers.md)
-- [Custom Management Commands](./custom-management-commands.md)
-- [Media Files](./media_files.md)
+- [Django Primers](./django-primers/README.md)
 - [Django Setup](./django-setup.md)
 - [Django Testing](./django-testing/README.md)
