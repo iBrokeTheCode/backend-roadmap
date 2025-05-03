@@ -7,3 +7,4 @@
 3. [Django Testing Basics](./django-testing-basics.md) - An introduction to the structure of test files and the utility of the **Django Test Case** class.
 4. [Testing Modules](./testing-modules.md) - Demonstrates how to test model **properties**, **methods**, and **validation logic** within the context of a Django application using the testing framework.
 5. [Testing Database Constraints](./database-constraints.md) - Enhances data integrity in Django applications by implementing and testing **database constraints**.
+6. [TestCase](./test-case.md) - Focus is on understanding how `TestCase` uses atomic transactions and how to leverage the **`setup_test_data`** class method as a performance enhancement compared to the standard `setup` method

@@ -8,11 +8,19 @@ from products.models import Product
 
 
 class ProductModelTest(TestCase):
-    def setUp(self) -> None:
-        """Set up a test product instance."""
-        self.product = Product.objects.create(
+    # def setUp(self) -> None:
+    #     """Set up a test product instance."""
+    #     self.product = Product.objects.create(
+    #         name='Test Product', price=100.00, stock_count=10
+    #     )
+    #     print('Setting up test data...')
+
+    @classmethod
+    def setUpTestData(cls):
+        cls.product = Product.objects.create(
             name='Test Product', price=100.00, stock_count=10
         )
+        print('Setting up test data...')
 
     def test_in_stock_property(self):
         """Test the in_stock property."""
