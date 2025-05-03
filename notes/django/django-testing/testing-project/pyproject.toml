@@ -10,3 +10,8 @@ dependencies = [
 
 [tool.ruff.format]
 quote-style = "single"
+
+[dependency-groups]
+dev = [
+    "djlint>=1.36.4",
+]

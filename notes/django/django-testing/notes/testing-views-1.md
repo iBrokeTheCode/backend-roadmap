@@ -45,6 +45,7 @@
 - [Testing in Django Tutorial #8 - Testing Views (part 1)](https://youtu.be/la69esudPYY?si=YgjWNpks6DUtkYK5)
 - [Django Documentation - Provided Test Case Classes](https://docs.djangoproject.com/en/5.1/topics/testing/tools/#provided-test-case-classes)
 - [Django Documentation - Assert Contains Method](https://docs.djangoproject.com/en/5.1/topics/testing/tools/#django.test.SimpleTestCase.assertContains)
+- [Testing Project](./testing-project/)
 
 ## 3. Practical Steps: Hands-on Guide
 
