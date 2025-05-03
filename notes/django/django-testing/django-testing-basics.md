@@ -17,6 +17,7 @@
 
 - [Testing in Django Tutorial #4 - Django Testing Basics](https://youtu.be/QklKI2etw30?si=pygEJ2-MgmTkwfPN)
 - [Django Documentation](https://docs.djangoproject.com/en/5.1/topics/testing/overview/)
+- [Testing Project](./testing-project/)
 
 ## 3. Practical Steps: Hands-on Guide
 
@@ -30,15 +31,15 @@
 
 2.  **Activate the Virtual Environment**:
 
-        - On Mac/Linux:
-          ```bash
-          source venv_testing/bin/activate
-          ```
-        - On Windows (not shown in source, common practice):
-          `bash
+    - On Mac/Linux:
+      ```bash
+      source venv_testing/bin/activate
+      ```
+    - On Windows (not shown in source, common practice):
+      ```bash
+      .\venv_testing\Scripts\activate
+      ```
 
-    .\venv_testing\Scripts\activate
-    `
     Activating the environment ensures that packages installed are specific to this environment.
 
 3.  **Install Django**:
