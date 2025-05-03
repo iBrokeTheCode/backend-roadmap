@@ -10,3 +10,4 @@
 6. [TestCase](./notes/test-case.md) - Focus is on understanding how `TestCase` uses atomic transactions and how to leverage the **`setUpTestData`** class method as a performance enhancement compared to the standard `setUp` method
 7. [Testing Views (part 1)](./notes/testing-views-1.md) - Understand how to write and test simple views that serve static HTML content without requiring database access, utilizing Django's testing tools like `SimpleTestCase` and the test client.
 8. [Testing Views (part 2)](./notes/testing-views-2.md) - Write tests for views that retrieve data from models, add it to the template **context**, and display it.
+9. [Testing Forms](./notes/testing-forms.md) - Covers creating a **Model Form** tied to a database model, adding **field-level validation** to the form, and integrating this form into a Django view to handle both GET and POST requests.

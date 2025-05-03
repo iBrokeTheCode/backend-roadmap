@@ -1,7 +1,6 @@
 from decimal import Decimal
 
 from django.contrib.auth.models import AbstractUser
-from django.core.exceptions import ValidationError
 from django.db import models
 from django.db.models import CheckConstraint, Q
 
@@ -33,11 +32,12 @@ class Product(models.Model):
             ),
         ]
 
-    def clean(self):
-        if self.price < 0:
-            raise ValidationError('Price cannot be negative')
-        if self.stock_count < 0:
-            raise ValidationError('Stock Count cannot be negative')
+    # NOTE: Commented because the validation was moved to forms.py file
+    # def clean(self):
+    #     if self.price < 0:
+    #         raise ValidationError('Price cannot be negative')
+    #     if self.stock_count < 0:
+    #         raise ValidationError('Stock Count cannot be negative')
 
     def get_discounted_price(self, discount_percentage: int) -> Decimal:
         return Decimal(self.price) * (1 - Decimal(discount_percentage) / Decimal(100))

@@ -1,6 +1,5 @@
 from decimal import Decimal
 
-from django.core.exceptions import ValidationError
 from django.db import IntegrityError
 from django.test import TestCase
 
@@ -35,19 +34,21 @@ class ProductModelTest(TestCase):
         self.assertEqual(self.product.get_discounted_price(10), 90)
         self.assertEqual(self.product.get_discounted_price(50), 50)
 
-    def test_negative_price_validation(self):
-        """Test that a negative price raises a ValidationError."""
-        self.product.price = Decimal(-10)
+    # NOTE: Commented because the validation was moved to forms.py file
+    # def test_negative_price_validation(self):
+    #     """Test that a negative price raises a ValidationError."""
+    #     self.product.price = Decimal(-10)
 
-        with self.assertRaises(ValidationError):
-            self.product.clean()
+    #     with self.assertRaises(ValidationError):
+    #         self.product.clean()
 
-    def test_negative_stock_count(self):
-        """Test that a negative stock count raises a ValidationError."""
-        self.product.stock_count = -10
+    # NOTE: Commented because the validation was moved to forms.py file
+    # def test_negative_stock_count(self):
+    #     """Test that a negative stock count raises a ValidationError."""
+    #     self.product.stock_count = -10
 
-        with self.assertRaises(ValidationError):
-            self.product.clean()
+    #     with self.assertRaises(ValidationError):
+    #         self.product.clean()
 
     def test_negative_price_constraint(self):
         """Test that a negative price raises an IntegrityError."""

@@ -1,5 +1,6 @@
-from django.shortcuts import render
+from django.shortcuts import redirect, render
 
+from products.forms import ProductForm
 from products.models import Product
 
 
@@ -8,6 +9,16 @@ def homepage(request):
 
 
 def product_list(request):
-    context = {'products': Product.objects.all()}
+    if request.method == 'POST':
+        form = ProductForm(request.POST)
+
+        if form.is_valid():
+            form.save()
+            return redirect('products:product-list')
+        else:
+            context = {'products': Product.objects.all(), 'form': form}
+            return render(request, 'products/product_list.html', context)
+
+    context = {'products': Product.objects.all(), 'form': ProductForm()}
 
     return render(request, 'products/product_list.html', context)
