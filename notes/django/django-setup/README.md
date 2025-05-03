@@ -25,7 +25,8 @@
 
 **Overview**
 
-> [!TIP] > **Overview**
+> [!TIP]  
+> **Overview**
 >
 > - **Restructure your settings files** by renaming the default project settings folder (e.g., `settings_demo`) to `config`.
 > - Within the new `config` directory, create two subdirectories: one named `django` for Django-specific settings and one named `settings` for third-party application settings.
