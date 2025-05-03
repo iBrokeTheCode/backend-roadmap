@@ -29,9 +29,7 @@ Follow these steps to write authentication tests for a protected profile page an
     ```python
     from django.test import TestCase, Client
     from django.urls import reverse
-    from django.contrib.auth import get_user_model # Or import your specific User model path
-    # Assuming your User model is the default or accessible
-    User = get_user_model()
+    from products.models import User
     ```
 
 4.  **Create a Test Class:** Define a new test class that subclasses `TestCase`, for example, `TestProfilePage`.
@@ -44,7 +42,6 @@ Follow these steps to write authentication tests for a protected profile page an
 
 5.  **Write Test for Authenticated Access:** Add a method to test that an authenticated user can access the protected view.
 
-    - Create a test user using `User.objects.create_user()`.
     - Log in the created user using `self.client.login(username='...', password='...')`.
     - Send a GET request to the protected page using `self.client.get(reverse('profile'))`.
     - Assert that the response contains content expected on the profile page (e.g., the user's username) using `self.assertContains(response, 'testuser')`.
