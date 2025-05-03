@@ -1,4 +1,4 @@
-# Testing in Django Tutorial #3 - The Python unittest Module
+# The Python unittest Module
 
 ## 1. Core Concepts
 
