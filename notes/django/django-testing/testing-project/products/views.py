@@ -1,5 +1,5 @@
 from django.shortcuts import render
 
 
-def index(request):
+def homepage(request):
     return render(request, 'products/index.html')
