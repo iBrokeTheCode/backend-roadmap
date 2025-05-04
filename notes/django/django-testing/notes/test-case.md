@@ -1,4 +1,4 @@
-# Testing in Django Tutorial #7 - TestCase
+# TestCase
 
 ## 1. Core Concepts
 
@@ -12,7 +12,7 @@
 
 - [Testing in Django Tutorial #7 - TestCase](https://youtu.be/hKjJmvksaJ8?si=TSDFJQfcRdaXeiCb)
 - [Django Documentation - TestCase](https://docs.djangoproject.com/en/5.1/topics/testing/tools/#testcase)
-- [Testing Project](./testing-project/)
+- [Project Tests](../testing-project/products/tests/)
 
 ## 3. Practical Steps: Hands-on Guide
 

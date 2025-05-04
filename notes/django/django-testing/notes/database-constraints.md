@@ -16,6 +16,7 @@
 
 - [Testing in Django Tutorial #6 - Testing Database Constraints](https://youtu.be/fP77InM74yc?si=267ZTR7uDYeteXh6)
 - [Django Documentation - Validating Objects](https://docs.djangoproject.com/en/5.1/ref/models/instances/#validating-objects)
+- [Project Tests](../testing-project/products/tests/test_models.py)
 
 ## 3. Practical Steps: Hands-on Guide
 

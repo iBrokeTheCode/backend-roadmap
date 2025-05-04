@@ -17,7 +17,7 @@
 
 - [Testing in Django Tutorial #4 - Django Testing Basics](https://youtu.be/QklKI2etw30?si=pygEJ2-MgmTkwfPN)
 - [Django Documentation](https://docs.djangoproject.com/en/5.1/topics/testing/overview/)
-- [Testing Project](./testing-project/)
+- [Testing Project](../testing-project/)
 
 ## 3. Practical Steps: Hands-on Guide
 

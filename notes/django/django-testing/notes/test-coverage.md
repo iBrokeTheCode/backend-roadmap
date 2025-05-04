@@ -1,4 +1,4 @@
-# Testing in Django Tutorial #16 - Test Coverage
+# Test Coverage
 
 ## 1. Core Concepts
 
@@ -22,7 +22,7 @@ Coverage.py operates in three distinct phases:
 
 - [Testing in Django Tutorial #16 - Test Coverage](https://youtu.be/yLhV1qCDFeU?si=8rCfn2yqKkWVHc3U)
 - [Coverage.py](https://coverage.readthedocs.io/en/7.8.0/)
-- [Testing Project](./testing-project/)
+- [Project Tests](../testing-project/products/tests/)
 
 ## 3. Practical Steps: Hands-on Guide
 

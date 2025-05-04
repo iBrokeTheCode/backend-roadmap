@@ -1,4 +1,4 @@
-# Testing in Django Tutorial #11 - Testing Authentication
+# Testing Authentication
 
 ## 1. Core Concepts
 
@@ -16,7 +16,7 @@
 ## 2. Resources
 
 - [Testing in Django Tutorial #11 - Testing Authentication](https://youtu.be/LBuyGv3R0IY?si=iqHAFVDzOjnUXnfn)
-- [Testing Project](./testing-project/)
+- [Project Tests](../testing-project/products/tests/test_views.py)
 
 ## 3. Practical Steps: Hands-on Guide
 

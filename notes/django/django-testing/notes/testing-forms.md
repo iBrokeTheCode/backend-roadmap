@@ -1,4 +1,4 @@
-# Testing in Django Tutorial #10 - Testing Forms
+# Testing Forms
 
 ## 1. Core Concepts
 
@@ -22,7 +22,7 @@
 ## 2. Resources
 
 - [Testing in Django Tutorial #10 - Testing Forms](https://youtu.be/RR7wANxu5gk?si=MYDJxoS2kA1fMEOI)
-- [Testing Project](./testing-project/)
+- [Project Tests](../testing-project/products/tests/test_forms.py)
 
 ## 3. Practical Steps: Hands-on Guide
 

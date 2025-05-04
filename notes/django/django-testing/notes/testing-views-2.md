@@ -1,4 +1,4 @@
-# Testing in Django Tutorial #9 - Testing Views (part 2)
+# Testing Views (part 2)
 
 ## 1. Core Concepts
 
@@ -22,7 +22,7 @@
 ## 2. Resources
 
 - [Testing in Django Tutorial #9 - Testing Views (part 2)](https://youtu.be/GOxdQLrEX5U?si=R6YF8lbqchuBI96v)
-- [Testing Project](./testing-project/)
+- [Project Tests](../testing-project/products/tests/test_views.py)
 
 ## 3. Practical Steps: Hands-on Guide
 

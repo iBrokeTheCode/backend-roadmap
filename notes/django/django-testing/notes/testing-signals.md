@@ -20,7 +20,7 @@
 
 - [Testing in Django Tutorial #13 - Testing Signals](https://youtu.be/DWMM0IJ2uNw?si=DzqDyo0mKx4_KzSn)
 - [Django Documentation - Signals](https://docs.djangoproject.com/en/5.1/topics/signals/)
-- [Testing Project](./testing-project/)
+- [Project Tests](../testing-project/products/tests/test_signals.py)
 
 ## 3. Practical Steps: Hands-on Guide
 

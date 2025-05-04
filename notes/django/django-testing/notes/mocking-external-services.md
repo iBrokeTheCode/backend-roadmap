@@ -1,4 +1,4 @@
-# Testing in Django Tutorial #12 - Mocking External Services
+# Mocking External Services
 
 ## 1. Core Concepts
 
@@ -23,7 +23,7 @@
 - [Testing in Django Tutorial #12 - Mocking External Services](https://youtu.be/Za1EBzZ0CfQ?si=vXVGyliTTZ4y1_F8)
 - [Unittest Documentation - Mock](https://docs.python.org/3/library/unittest.mock.html)
 - [Unittest Documentation - The patchers](https://docs.python.org/3/library/unittest.mock.html#the-patchers)
-- [Testing Project](./testing-project/)
+- [Project Tests](../testing-project/products/tests/test_views.py)
 
 ## 3. Practical Steps: Hands-on Guide
 

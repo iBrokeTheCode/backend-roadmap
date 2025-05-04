@@ -12,7 +12,7 @@
 
 - [Testing in Django Tutorial #14 - Test Settings](https://youtu.be/3tHHTnLqZfA?si=PPYURSKgAr59TaL7)
 - [Django Documentation - Middleware](https://docs.djangoproject.com/en/5.1/topics/http/middleware/)
-- [Middleware Tests](../testing-project/products/tests/test_middleware.py)
+- [Project Tests](../testing-project/products/tests/test_middleware.py)
 
 ## 3. Practical Steps: Hands-on Guide
 

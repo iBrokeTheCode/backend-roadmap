@@ -1,4 +1,4 @@
-# Testing in Django Tutorial #5 - Testing Modules
+# Testing Modules
 
 ## 1. Core Concepts
 
@@ -63,7 +63,7 @@ When testing Django models, the focus should be on custom **business logic**, **
 
 - [Testing in Django Tutorial #5 - Testing Modules](https://youtu.be/duYxizXokZM?si=DyR3O_J-fqgXKxEJ)
 - [Django Documentation](https://docs.djangoproject.com/en/5.1/internals/contributing/writing-code/unit-tests/)
-- [Testing Project](./testing-project/)
+- [Project Tests](../testing-project/products/tests/test_models.py)
 
 ## 3. Practical Steps: Hands-on Guide
 
