@@ -12,3 +12,9 @@ class MaintenanceModeTests(TestCase):
         response = self.client.get(self.home_url)
 
         self.assertContains(response, 'Welcome to our store', status_code=200)
+
+    @override_settings(MAINTENANCE_MODE=True)
+    def test_maintenance_mode_on(self):
+        response = self.client.get(self.home_url)
+
+        self.assertContains(response, 'Site under maintenance', status_code=503)

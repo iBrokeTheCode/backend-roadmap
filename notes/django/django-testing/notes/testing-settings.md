@@ -144,8 +144,6 @@
       ```
     - This test should pass because you used the `@override_settings` decorator to force **`MAINTENANCE_MODE`** to `False` for this test. If you commented out the decorator and ran the test while `MAINTENANCE_MODE = True` in `settings.py`, the test would fail.
 
----
-
 8.  **Write Test for Maintenance Mode On**:
 
     - Define another test method, `test_maintenance_mode_on`, within the test class.
