@@ -95,8 +95,6 @@
     - Observe the output; you should see the "Signal fired!" print statement and the email content printed to the console.
     - Exit the shell: `exit()`.
 
----
-
 5.  **Create a Test File for Signals:**
 
     - In your application's `tests` directory, create a file named `test_signals.py`.
@@ -108,7 +106,7 @@
       # products/tests/test_signals.py
       from django.test import TestCase
       from unittest.mock import patch # For mocking
-      from django.contrib.auth.models import User # The sender model
+      from products.models import User # The sender model
       ```
 
 7.  **Write a Test Case Class:**

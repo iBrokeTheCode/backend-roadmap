@@ -8,7 +8,7 @@ from products.models import User
 @receiver(post_save, sender=User)
 def send_welcome_email(sender, instance, created, **kwargs):
     if created:
-        print('Signal fired!')
+        # print('Signal fired!')
         subject = 'Thank you for signing up'
         message = 'Welcome to the app'
         from_email = 'admin@django.com'
