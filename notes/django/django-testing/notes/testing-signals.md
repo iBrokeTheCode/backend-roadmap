@@ -66,6 +66,9 @@
 
           def ready(self):
               import products.signals # Import your signals module here
+
+              signals.send_welcome_email
+              # _ = signals
       ```
 
 3.  **Configure Email Backend for Testing:**
@@ -91,6 +94,8 @@
       ```
     - Observe the output; you should see the "Signal fired!" print statement and the email content printed to the console.
     - Exit the shell: `exit()`.
+
+---
 
 5.  **Create a Test File for Signals:**
 
