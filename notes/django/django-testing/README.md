@@ -1,5 +1,10 @@
 # Testing in Django
 
+## References
+
+> [!INFO]  
+> Notes taken from the [Testing in Django](https://youtube.com/playlist?list=PL4cUxeGkcC9ic9O6xDW2d1qMp3rMOb0Nu&si=9ZWgnUf-k8YjPICY) tutorial.
+
 ## Table of Contents
 
 1. [Overview in Testing](./notes/testing-overview.md) - An introduction and overview of testing, specifically focusing on its application in web development and within the Django framework.
