@@ -1,6 +1,6 @@
 from unittest.mock import patch
 
-from django.test import SimpleTestCase, TestCase
+from django.test import SimpleTestCase, TestCase, tag
 from django.urls import reverse, reverse_lazy
 from requests.exceptions import RequestException
 
@@ -72,6 +72,7 @@ class TestProfilePage(TestCase):
         cls.profile_url = reverse('products:profile')
         cls.login_url = reverse('products:login')
 
+    @tag('auth')
     def test_profile_view_redirects_for_anonymous_users(self):
         """Test that anonymous users are redirected to the login page."""
         response = self.client.get(self.profile_url)
@@ -79,6 +80,7 @@ class TestProfilePage(TestCase):
 
         self.assertRedirects(response, expected_url)
 
+    @tag('auth', 'integration')
     def test_profile_view_accessible_for_authenticated_users(self):
         """Test that authenticated users can access the profile view."""
         User.objects.create_user(username='username', password='password')  # Create

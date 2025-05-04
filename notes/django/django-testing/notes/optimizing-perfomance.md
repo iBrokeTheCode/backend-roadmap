@@ -10,9 +10,9 @@ Large Django projects can have thousands of tests that hit the database, perform
 
 Tests that interact with external services like APIs or caches can be slow due to network connections, latency, or potential errors. A performance improvement is to **mock** these services, replacing them with **mock objects** that simulate their behavior without the overhead of actual external calls.
 
-### Efficient Test Setup: `setup_test_data`
+### Efficient Test Setup: `setUpTestData`
 
-The `setup_test_data` is a **class method** available on the **`TestCase`** class. Unlike a standard `setup` function (which runs before _every_ test method in a class), `setup_test_data` runs only **once** for the entire test case class. This allows for consolidating test setup and is a good performance optimization for classes with complex setup logic and many test methods, as data creation happens only once.
+The `setUpTestData` is a **class method** available on the **`TestCase`** class. Unlike a standard `setUp` function (which runs before _every_ test method in a class), `setUpTestData` runs only **once** for the entire test case class. This allows for consolidating test setup and is a good performance optimization for classes with complex setup logic and many test methods, as data creation happens only once.
 
 ### Database Handling: `TestCase` vs `TransactionTestCase`
 
