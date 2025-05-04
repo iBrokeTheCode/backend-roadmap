@@ -1,4 +1,4 @@
-# Testing in Django Tutorial #14 - Test Settings
+# Test Settings
 
 ## 1. Core Concepts
 
