@@ -13,3 +13,4 @@
 9. [Testing Forms](./notes/testing-forms.md) - Covers creating a **Model Form** tied to a database model, adding **field-level validation** to the form, and integrating this form into a Django view to handle both GET and POST requests.
 10. [Testing Authentication](./notes/testing-authentication.md) - Write tests to verify that protected pages are only accessible to authenticated users and that unauthenticated users attempting to access them are correctly redirected
 11. [Mocking External Services](./notes/mocking-external-services.md) - Demonstrates how to use Python's built-in **`unittest.mock`** library, specifically the **`patch`** decorator, to mock external HTTP requests made using the **`requests`** module in a Django view.
+12. [Testing Signals](./notes/testing-signals.md) - Write tests for a signal that sends a welcome email when a new user is created, specifically focusing on using **mocking** to test the email sending logic without actually sending emails
