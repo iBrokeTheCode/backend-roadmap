@@ -2,7 +2,7 @@
 
 ## References
 
-> [!INFO]  
+> [!IMPORTANT]  
 > Notes taken from the [Testing in Django](https://youtube.com/playlist?list=PL4cUxeGkcC9ic9O6xDW2d1qMp3rMOb0Nu&si=9ZWgnUf-k8YjPICY) tutorial.
 
 ## Table of Contents
