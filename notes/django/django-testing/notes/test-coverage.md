@@ -26,8 +26,6 @@ Coverage.py operates in three distinct phases:
 
 ## 3. Practical Steps: Hands-on Guide
 
-Here's a step-by-step guide to using coverage.py based on the tutorial:
-
 1.  **Install coverage.py**: Since it's a third-party tool, you need to install it into your virtual environment.
 
     ```bash
@@ -37,7 +35,7 @@ Here's a step-by-step guide to using coverage.py based on the tutorial:
 2.  **Run Tests with Coverage**: Replace the initial `python` in your test command with `coverage run` to execute your tests while coverage.py monitors code execution.
 
     ```bash
-    coverage run manage.py test --settings=your_project.settings.testing
+    coverage run manage.py test --settings your_project.settings.testing
     ```
 
     _(Note: The `--settings` part might vary based on your project setup)_
