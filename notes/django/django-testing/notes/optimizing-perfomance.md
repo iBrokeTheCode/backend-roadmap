@@ -57,6 +57,7 @@ Disabling logging in tests can also potentially offer performance improvements.
 - [unittest.mock](https://docs.python.org/3/library/unittest.mock.html)
 - [TestCase](https://docs.djangoproject.com/en/5.1/topics/testing/tools/#testcase)
 - [TransactionTestCase](https://docs.djangoproject.com/en/5.1/topics/testing/tools/#transactiontestcase)
+- [Testing Project](./testing-project/)
 
 ## 3. Practical Steps: Hands-on Guide
 
