@@ -12,7 +12,7 @@
 
 - [Testing in Django Tutorial #14 - Test Settings](https://youtu.be/3tHHTnLqZfA?si=PPYURSKgAr59TaL7)
 - [Django Documentation - Middleware](https://docs.djangoproject.com/en/5.1/topics/http/middleware/)
-- [Testing Project](./testing-project/)
+- [Middleware Tests](../testing-project/products/tests/test_middleware.py)
 
 ## 3. Practical Steps: Hands-on Guide
 
@@ -98,7 +98,7 @@
 
     ```python
     # products/tests/test_middleware.py
-    from django.test import TestCase, Client, override_settings
+    from django.test import TestCase, override_settings
     from django.urls import reverse
     # No need to import middleware directly for this test
     ```
@@ -143,6 +143,8 @@
       python manage.py test products.tests.test_middleware
       ```
     - This test should pass because you used the `@override_settings` decorator to force **`MAINTENANCE_MODE`** to `False` for this test. If you commented out the decorator and ran the test while `MAINTENANCE_MODE = True` in `settings.py`, the test would fail.
+
+---
 
 8.  **Write Test for Maintenance Mode On**:
 
