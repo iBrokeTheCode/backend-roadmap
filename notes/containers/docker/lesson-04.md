@@ -31,18 +31,18 @@ The tutorial demonstrates generating Dockerfiles for two types of applications: 
 1.  **Prepare the Application**: Have a Node.js application with an `index.js` file that uses Express.js and listens on a specific port (e.g., 3000) and a `package.json` with an `npm start` script.
 2.  **Use `docker init`**:
 
-    - Open a terminal in the application's root directory.
-    - Run the command:
+Open a terminal in the application's root directory and run the command:
 
-      ```bash
-      docker init
-      ```
+```bash
+docker init
+```
 
-    > [!WARNING]
-    > The `docker init` command only works if you installed Docker Desktop (it's not available for Docker CLI)
+> [!WARNING]
+> The `docker init` command only works if you installed Docker Desktop (it's not available for Docker CLI)
 
-    - Follow the interactive assistant prompts: select the application language (Node.js), specify the version, package manager (npm), start script (`npm start`), and the port the application listens on (e.g., 3000).
-    - `docker init` will generate a `Dockerfile`, `.dockerignore`, `compose.yaml`, and `README.docker.md`.
+Follow the interactive assistant prompts: select the application language (Node.js), specify the version, package manager (npm), start script (`npm start`), and the port the application listens on (e.g., 3000).
+
+`docker init` will generate a `Dockerfile`, `.dockerignore`, `compose.yaml`, and `README.docker.md`.
 
 3.  **Build the Docker Image**:
 
