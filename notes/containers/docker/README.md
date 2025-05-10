@@ -7,10 +7,10 @@
 2. [Docker CLI Fundamentals](./lesson-02.md) | [Tutorial](https://youtu.be/VFPTcHgQ9x0?si=4IDefCcQmx_Goqot)
 3. [Crea tus propias imágenes de Docker](./lesson-03.md) | [Tutorial](https://youtu.be/nggu0pcLsxM?si=VCVhV8mJmP9QojRa)
 4. [Herramientas para generar Dockerfiles](./lesson-04.md) | [Tutorial](https://youtu.be/hZQA51uoHAU?si=idTSQtGVALieTT-T)
+5. [Cómo funciona el networking en Docker](./lesson-05.md) | [Tutorial](https://youtu.be/n5Zw00mYRH4?si=XM1c6XOX5_If5lOi)
 
 **Pending**
 
-5. Cómo funciona el networking en Docker | [Tutorial](https://youtu.be/n5Zw00mYRH4?si=XM1c6XOX5_If5lOi)
 6. Persistir datos en Docker | [Tutorial](https://youtu.be/-PVExF6XRik?si=gZ2SkEQcQsGC49Oe)
 7. Cómo empezar con Docker Compose | [Tutorial](https://youtu.be/oP2yBGG2yE4?si=W5EB3fs0JF1nboaa)
 8. Publicar tus imágenes de Docker en Docker Hub | [Tutorial](https://youtu.be/HWSfk1MJilg?si=41_AtMNGstDl-L4M)
