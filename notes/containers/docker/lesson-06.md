@@ -19,14 +19,14 @@ This tutorial explores methods for **persisting data** in **Docker containers**.
   - **Availability:** Requires Docker to be installed directly on a **Linux machine**. Not demonstrated in this video.
   - **Lifecycle:** Data is stored in memory and **does not persist** after the container stops.
 
-## 2. Practical Steps: Hands-on Guide
+## 2. Practical Steps
 
-**Demonstrating Bind Mounts**
+### Demonstrating Bind Mounts
 
 1.  Open a terminal.
 2.  Run an Nginx container using a **Bind Mount** with the `-v` parameter (older format):
     ```bash
-    docker run --name deadpool-enginex -p 8080:80 -d -v "$(pwd)/deadpool-site:/user/share/nginx/html" enginex
+    docker run --name deadpool-nginx -p 8080:80 -d -v $(pwd)/deadpool-site:/usr/share/nginx/html nginx
     ```
     - `$(pwd)/deadpool-site`: The absolute path to the directory on the Host.
     - `/user/share/nginx/html`: The target directory inside the container.
@@ -35,21 +35,24 @@ This tutorial explores methods for **persisting data** in **Docker containers**.
 5.  Modify a file (e.g., `script.js`) in the Host directory mapped by the Bind Mount.
 6.  Refresh the browser; the changes should appear instantly because it's a live mapping, not a copy.
 7.  Inspect the Bind Mount configuration using the Docker extension in VS Code or Docker Desktop to confirm the mapping and read/write status.
+
 8.  Run an Nginx container using a **Bind Mount** with the recommended `--mount` parameter:
     ```bash
-    docker run --name deadpool-readonly -p 8081:80 -d --mount type=bind,source="$(pwd)/deadpool-site",target=/user/share/nginx/html enginex
+    docker run --name deadpool-readonly -p 8081:80 -d --mount type=bind,source=$(pwd)/deadpool-site,target=/usr/share/nginx/html nginx
     ```
     - `type=bind`: Specifies the mount type.
     - `source=...`: Specifies the Host path.
     - `target=...`: Specifies the Container path.
 9.  To make the mount **read-only** from the container's perspective, add `ro` or `readonly` to the mount options:
     ```bash
-    docker run --name deadpool-readonly -p 8081:80 -d --mount type=bind,source="$(pwd)/deadpool-site",target=/user/share/nginx/html,ro enginex
+    docker run --name deadpool-readonly -p 8081:80 -d --mount type=bind,source=$(pwd)/deadpool-site,target=/usr/share/nginx/html,ro nginx
     ```
-10. Attempt to write a file inside the container using the read-only mount (e.g., `docker exec deadpool-readonly echo "Hello World" > /user/share/nginx/html/index.html`). It should fail with a permission denied error.
+10. Attempt to write a file inside the container using the read-only mount (e.g., `docker exec deadpool-readonly echo "Hello World" > /usr/share/nginx/html/index.html`). It should fail with a permission denied error.
 11. Modify a file in the Host directory again. Changes should still be possible from the Host side.
 
-**Demonstrating Volumes**
+---
+
+### Demonstrating Volumes
 
 1.  Run an Nginx container using a **Volume** with the `--mount` parameter:
     ```bash
