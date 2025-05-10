@@ -55,62 +55,29 @@ This tutorial explores methods for **persisting data** in **Docker containers**.
 ### Demonstrating Volumes
 
 1.  Run an Nginx container using a **Volume** with the `--mount` parameter:
+
     ```bash
-    docker run --name wolverine-site -p 8083:80 -d --mount type=volume,source=WolverineData,target=/user/share/nginx/html enginex
+    docker run --name wolverine-site -p 8083:80 -d --mount type=volume,source=wolverine-data,target=/usr/share/nginx/html nginx
     ```
+
     - `type=volume`: Specifies the mount type.
-    - `source=WolverineData`: Specifies the name for the volume. (If source is omitted, Docker generates a random name).
-    - `target=/user/share/nginx/html`: Specifies the target directory inside the container.
+    - `source=wolverine-data`: Specifies the name for the volume. (If source is omitted, Docker generates a random name).
+    - `target=/usr/share/nginx/html`: Specifies the target directory inside the container.
+
+    Can also create the volume with the command:
+
+    ```shell
+    docker volume create <name>
+    ```
+
 2.  Inspect the volume configuration using the Docker extension in VS Code or Docker Desktop; it will show the volume name instead of a Host path.
 3.  Open the container in a browser (e.g., `localhost:8083`). Initially, you might see the default Nginx welcome page if the image initializes the directory, because the volume is empty.
 4.  Copy content into the container's volume using the `docker cp` command:
+
     ```bash
-    docker cp wolverine-site:/path/on/host /user/share/nginx/html WolverineData:
+    docker cp wolverine-site/. wolverine-site:/usr/share/nginx/html
     ```
-    *(Note: The source gives `docker cp wolverin-site wolverin-site:...` which seems incorrect. A typical copy *into* a container is `docker cp [source_path_on_host] [container_name]:[destination_path_in_container]`. Copying *out* is `docker cp [container_name]:[source_path_in_container] [destination_path_on_host]`. The example shown copies from a host directory into the container's mapped volume directory: `docker cp wolverin-site <local_path> wolverin-site:/user/share/nginx/html` is implied by the description "copiar todo el contenido de ese wolverinsite [local directory] dentro de el contenedor que he llamado pues wolver inside". Let's use the description's intent).*
-    ```bash
-    docker cp ./wolverine-site wolverine-site:/user/share/nginx/html
-    ```
-    _(Correction based on source: The source command was `docker cp ./wolverine-site wolverine-site:/user/share/nginx/html`. This copies a local directory `./wolverine-site` into the container's directory mapped by the volume. Let's use that)._
-    ```bash
-    docker cp ./wolverine-site wolverine-site:/user/share/nginx/html
-    ```
+
 5.  Refresh the browser; the content copied into the volume should now be served.
-6.  View the content stored in the volume using Docker Desktop or by exploring the volume content directly via the Docker extension in VS Code.
-7.  Demonstrate **volume persistence** by removing the container (`docker rm -f wolverine-site`) and then creating a _new_ container using the _same volume name_ (`source=WolverineData`). The data will still be present in the new container because the volume persisted.
-
-**Applying Volumes to a Database (Tour of Heroes Example)**
-
-1.  Create a Docker network for the application:
-    ```bash
-    docker network create tour-of-heroes-bnet
-    ```
-2.  Run the database container _without_ a volume initially:
-    ```bash
-    docker run --name db --network tour-of-heroes-bnet -e ACCEPT_EULA=Y -e SA_PASSWORD=<YourSecurePassword> -d mcr.microsoft.com/mssql/server:2019-latest
-    ```
-3.  Run the application API container on the same network:
-    ```bash
-    docker build -t tour-heroes-api:v1 . # Assuming Dockerfile is in current dir
-    docker run --name api --network tour-of-heroes-bnet -p 5051:5000 -d tour-heroes-api:v1
-    ```
-4.  Access the API in the browser (e.g., `localhost:5051/api/Hero`). Observe the initial set of heroes are loaded as the DB initializes.
-5.  Update the API code (e.g., add a POST endpoint) and build a new image (e.g., `tour-heroes-api:v2`).
-6.  Remove the old API container and run a new one using the `v2` image.
-7.  Use a tool (like the REST Client extension in VS Code) to send POST requests to the API to add new heroes.
-8.  Send a GET request to the API to retrieve all heroes, confirming the new ones were added to the database inside the container.
-9.  **Demonstrate data loss:** Remove the database container (`docker rm -f db`).
-10. Recreate the database container _without_ a volume again.
-11. Send a GET request to the API. Observe that only the _initial_ heroes are present; the heroes added via POST requests are gone because the data was stored inside the container and removed with it.
-12. Remove the database container again.
-13. **Persist data with a Volume:** Create the database container _with_ a volume mapped to the data directory (`/var/opt/mssql` for MSSQL):
-    ```bash
-    docker run --name db --network tour-of-heroes-bnet -e ACCEPT_EULA=Y -e SA_PASSWORD=<YourSecurePassword> -d --mount type=volume,source=dbdata,target=/var/opt/mssql mcr.microsoft.com/mssql/server:2019-latest
-    ```
-    - `source=dbdata`: Names the volume `dbdata`.
-    - `target=/var/opt/mssql`: Maps the volume to the default data directory for MSSQL inside the container.
-14. Send POST requests to add the new heroes again.
-15. Send a GET request to verify all heroes (initial + added) are present.
-16. **Demonstrate persistence with the Volume:** Remove the database container (`docker rm -f db`).
-17. Recreate the database container using the _same volume name_ (`dbdata`) as in step 13.
-18. Send a GET request to the API. Observe that _all_ heroes, including the ones added via POST, are still present because the data persisted in the `dbdata` volume. This shows that volumes allow data to survive container removal and recreation.
+6.  View the content stored in the volume using Docker Desktop or by exploring the volume content directly via the Docker extension in VS Code. (`Explore in a Dev Container` option).
+7.  Demonstrate **volume persistence** by removing the container (`docker rm -f wolverine-site`) and then creating a _new_ container using the _same volume name_ (`source=wolverine-data`). The data will still be present in the new container because the volume persisted.
