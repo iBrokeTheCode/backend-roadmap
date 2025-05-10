@@ -81,11 +81,9 @@ This tutorial explores the networking capabilities within **Docker**, focusing o
     EXPOSE 8082
     ```
 
----
-
 7.  **Communicate Between Containers on the Default Bridge Network (using IP):**
 
-    - Run a container (`busybox`) interactively on the bridge network with auto-removal:
+    - Run a container (`busybox`) interactively (`-it`) on the bridge network with auto-removal (`--rm`):
       ```bash
       docker run -it --rm busybox
       ```
@@ -113,32 +111,29 @@ This tutorial explores the networking capabilities within **Docker**, focusing o
 
     Connect interactively to a `busybox` container on the none network.
 
-    - Inside the container, run `ifconfig`:
-      ```bash
-      ifconfig
-      ```
-      You will only see the `lo` (loopback) interface, confirming no external network connectivity.
+    - Inside the container, run `ifconfig`. You will only see the `lo` (loopback) interface, confirming no external network connectivity.
 
 10. **Create a Custom Network:**
 
     ```bash
-    docker network create tour-heroes-bnet
+    docker network create <network_name>
     ```
 
-    This creates a new bridge network named `tour-heroes-bnet`. Verify its creation using `docker network list`.
+    This creates a new bridge network with the given name. Verify its creation using `docker network list`.
 
 11. **Build an Image with Network Tools:**
 
-        - Create a Dockerfile (e.g., `Dockerfile.ubuntu-nettools`) with content like:
-          ```dockerfile
-          FROM ubuntu
-          RUN apt-get update && apt-get install -y iputils-ping wget
-          ```
-        - Build the image:
-          `bash
+    - Create a Dockerfile (e.g., `Dockerfile.ubuntu-nettools`) with content like:
+      ```dockerfile
+      FROM ubuntu
+      RUN apt-get update && apt-get install -y iputils-ping wget
+      ```
+    - Build the image:
+      ```bash
+      docker build -t ubuntu-with-net-tools -f Dockerfile.ubuntu-nettools .
+      ```
 
-    docker build -t ubuntu-with-net-tools -f Dockerfile.ubuntu-nettools .
-    `      This builds an image based on Ubuntu with`ping`and`wget` installed.
+    This builds an image based on Ubuntu with `ping` and `wget` installed.
 
 12. **Run Containers on the Custom Network (using Names):**
 
@@ -163,45 +158,7 @@ This tutorial explores the networking capabilities within **Docker**, focusing o
       ```
       This also works, showing bidirectional communication using names.
 
-13. **Set up Tour of Heroes Application with a Database:**
-
-    - Ensure you have the necessary application code, including modifications to connect to a SQL Server database (e.g., using Entity Framework in a .NET application). This includes configuring the connection string in `appsettings.json` to point to the database container by its name and the default SQL Server port (1433).
-    - Run a SQL Server container on the custom network:
-      ```bash
-      docker run -d --name db --network tour-heroes-bnet -e ACCEPT_EULA=Y -e SA_PASSWORD=<YourStrongPassword> mcr.microsoft.com/mssql/server:2019-latest
-      ```
-      Replace `<YourStrongPassword>` with a strong password. This runs the database container named `db` on the custom network.
-
-14. **Build and Run the API Container on the Custom Network:**
-
-    - Build the API image from its Dockerfile:
-      ```bash
-      docker build -t tour-heroes-api:v1 .
-      ```
-    - Run the API container on the custom network with Port Mapping for external access:
-      ```bash
-      docker run -d --name api --network tour-heroes-bnet -p 5051:5000 tour-heroes-api:v1
-      ```
-      This runs the API container named `api` on the custom network, mapping container port `5000` (where the API listens) to Host port `5051`. The API container can communicate with the `db` container using its name (`db`) because they are on the same custom network. External access to the API is via `localhost:5051`.
-
-15. **Build and Run the Frontend Container:**
-
-    - Modify the frontend application code (e.g., Angular) to call the API using the Host's external address and mapped port (e.g., `http://localhost:5051`).
-    - Build the frontend image from its Dockerfile:
-      ```bash
-      docker build -t tour-heroes-web:v1 .
-      ```
-    - Run the frontend container:
-      ```bash
-      docker run -d --name web -p 80:80 tour-heroes-web:v1
-      ```
-      This runs the frontend container, mapping container port `80` to Host port `80`. The frontend container runs on the default bridge network or no specific network, but it accesses the API via the Host's mapped port, not via the internal custom network.
-
-16. **Verify the Running Application:**
-
-    - Access the frontend application in your browser at `http://localhost` (or the mapped port if different). The frontend calls the API via `localhost:5051`, the API communicates with the `db` container via the custom network's DNS (`db:1433`), retrieves data, and serves it back to the frontend.
-
-17. **Clean Up Resources:**
+13. **Clean Up Resources:**
     - Stop and remove all running containers:
       ```bash
       docker stop $(docker ps -q)
