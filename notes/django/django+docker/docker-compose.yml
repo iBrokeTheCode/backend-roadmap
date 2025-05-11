@@ -1,0 +1,39 @@
+services:
+  web:
+    # build: .
+    build: # Build from the Dockerfile in the current directory
+      context: .
+      dockerfile: ./Dockerfile
+    container_name: django_app # Optional, provides a friendly name
+    ports: # Map host port 8000 to container port 8000
+      - 8000:8000
+    volumes: # Mount the source directory for live updates during development
+      - ./src:/app
+    depends_on:
+      db:
+        condition: service_healthy # Wait for the database to be healthy
+        # command: python manage.py runserver 0.0.0.0:8000 # CMD from Dockerfile is default
+        restart: true # Restart if the service fails
+    env_file:
+      - .env
+  db:
+    # Configuration for the Postgres database service goes here
+    image: postgres:17 # Use a specific Postgres image from Docker Hub
+    container_name: postgres_db # Optional, friendly name
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/ # Named volume for data persistence
+    environment: # Set required Postgres environment variables
+      # Values will be read from the .env file via interpolation
+      POSTGRES_DB: ${POSTGRES_DB}
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+    healthcheck: # Define a health check for the database
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER} -d ${POSTGRES_DB}"] # Check if Postgres is ready
+      interval: 10s # Check every 10 seconds
+      retries: 5 # Retry 5 times
+      start_period: 30s # Allow 30 seconds for the container to start
+      timeout: 10s # Wait 5 seconds for a response
+
+# Define named volumes
+volumes:
+  postgres_data:
