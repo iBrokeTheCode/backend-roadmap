@@ -10,6 +10,7 @@
 - [Django ORM Notes](https://github.com/ibrokethecode/orm-deep-dive?tab=readme-ov-file#orm-deep-dive-tutorial)
 - [Django REST Framework](https://github.com/iBrokeTheCode/django-rest-framework)
 - [FastAPI Notes](https://github.com/iBrokeTheCode/fastapi-course)
+- [Docker Notes](https://github.com/iBrokeTheCode/backend-roadmap/blob/main/notes/containers/docker/README.md)
 
 ## Roadmap
 
@@ -109,7 +110,7 @@
    &nbsp;&nbsp;- [Browsable API](https://github.com/iBrokeTheCode/django-rest-framework/blob/main/notes/lesson-02.md) & [permissions](https://github.com/iBrokeTheCode/django-rest-framework/blob/main/notes/lesson-08.md)
 
    6.3. **FastAPI**  
-   &nbsp;&nbsp;- Path/Query/Body parameters  
+   &nbsp;&nbsp;- [Path/Query/Body parameters](https://github.com/iBrokeTheCode/fastapi-course/blob/main/notes/lesson-01.md)  
    &nbsp;&nbsp;- Dependency injection  
    &nbsp;&nbsp;- OpenAPI docs & validation
 
@@ -131,6 +132,7 @@
 
    8.1. **Unit Testing with pytest**  
    &nbsp;&nbsp;- [Introduction to Pytest and Unittest](https://github.com/iBrokeTheCode/python-roadmap/blob/main/testing/Unit_Testing.md)  
+   &nbsp;&nbsp;- [Django Testing (unittest)](./notes/django/django-testing/)  
    &nbsp;&nbsp;- Fixtures, parametrization
 
    8.2. **Integration Tests**  
@@ -182,13 +184,12 @@
 
 14. **Containerization & Deployment**  
     14.1. **Docker Basics**  
-    &nbsp;&nbsp;- [Docker](./notes/containers/docker/README.md)  
     &nbsp;&nbsp;- [Fundamentals](./notes/containers/docker/lesson-02.md)  
-    &nbsp;&nbsp;- Images, containers, volumes, networks  
+    &nbsp;&nbsp;- [Images](./notes/containers/docker/lesson-03.md), [containers](./notes/containers/docker/lesson-04.md), [volumes](./notes/containers/docker/lesson-06.md), [networks](./notes/containers/docker/lesson-05.md)  
     &nbsp;&nbsp;- [Podman](./notes/containers/podman/README.md)
 
     14.2. **Docker Compose**  
-    &nbsp;&nbsp;- Multi‑service setups
+    &nbsp;&nbsp;- [Multi‑service setups](./notes/containers/docker/lesson-07.md)
 
     14.3. **Cloud Deployment**  
     &nbsp;&nbsp;- Heroku, AWS ECS, DigitalOcean App Platform
