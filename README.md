@@ -70,16 +70,16 @@
 
 4. **Databases**
 
-   4.1. **Relational & SQL Primer**  
+   4.1. **Relational & SQL Primer** [Resource](https://youtu.be/OT1RErkfLNQ?si=yQWFLMcdgM9cHiIq)  
    &nbsp;&nbsp;- CRUD operations  
    &nbsp;&nbsp;- Joins, aggregations, subqueries
 
-   4.2. **PostgreSQL Deep Dive**  
+   4.2. **PostgreSQL Deep Dive** - [Resource](https://youtu.be/UmC5u-trft8?si=UjeYe4iwvo_t3oLR)  
    &nbsp;&nbsp;- Schemas, indexes, constraints  
    &nbsp;&nbsp;- Transactions & isolation levels  
    &nbsp;&nbsp;- Extensions (PostGIS, pgcrypto)
 
-   4.3. **NoSQL Overview (MongoDB basics)**  
+   4.3. **NoSQL Overview (MongoDB basics)** [Resource](https://youtu.be/l0Wnwxk5rw8?si=n9TKHRFQAf1FiJhi)  
    &nbsp;&nbsp;- Document model & CRUD  
    &nbsp;&nbsp;- When to choose NoSQL
 
@@ -143,7 +143,7 @@
    &nbsp;&nbsp;- Selenium / Playwright basics  
    &nbsp;&nbsp;- CI integration
 
-9. **CI/CD & Automation**
+9. **CI/CD & Automation** - [Pending](https://youtube.com/playlist?list=PLO9JpmNAsqM7ZHZXx0OzCOhu1_ujZrvu3&si=BGBoC2k6mUYv8rOt)
 
    9.1. **GitHub Actions / GitLab CI**  
    &nbsp;&nbsp;- Writing workflow YAML  
@@ -155,6 +155,8 @@
    9.3. **Deployment Pipelines**  
    &nbsp;&nbsp;- Build → Test → Deploy steps  
    &nbsp;&nbsp;- Notifications & rollbacks
+
+---
 
 10. **Advanced Database Topics**  
     10.1. **ACID & Isolation**  
@@ -170,7 +172,7 @@
 12. **Software Architecture & Patterns**  
     12.1. **Monolith & Modular Monolith**  
     12.2. **Microservices Overview**  
-    12.3. **Common Design Patterns**  
+    12.3. **Common Design Patterns** - [Resource](https://youtu.be/gAeZpA6avsA?si=6bgkIHGIIkfxYHbo)  
     &nbsp;&nbsp;- Factory  
     &nbsp;&nbsp;- Repository  
     &nbsp;&nbsp;- Observer  
@@ -180,7 +182,7 @@
 13. **Development Principles**  
     13.1. **Test‑Driven Development (TDD)**  
     13.2. **Domain‑Driven Design (DDD) Basics**  
-    13.3. **SOLID & Clean Code**
+    13.3. **SOLID & Clean Code** - [Resource](https://youtu.be/u4s-4vRuZ0w?si=fV_jCEyjsHM9bZDJ)
 
 14. **Containerization & Deployment**  
     14.1. **Docker Basics**  
@@ -202,5 +204,5 @@
 16. **Next Steps & Advanced Topics**  
     16.1. **Caching (Redis, CDN)**  
     16.2. **Message Brokers (RabbitMQ, Kafka)**  
-    16.3. **Search Engines **  
+    16.3. **Search Engines**  
     16.4. **Real‑Time & WebSockets**
