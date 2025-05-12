@@ -27,13 +27,11 @@ This tutorial introduces **Django Signals**, a built-in part of the Django frame
 
 ## 3. Practical Steps: Hands-on Guide
 
-This section outlines practical examples demonstrated in the tutorial, showing how to implement Django signals for specific tasks.
-
 **Example 1: Sending a Welcome Email on User Creation**
 
 This example uses the `post_save` signal to send a welcome email after a new user is saved to the database.
 
-1.  **Set up Custom User Model:** Ensure you have a custom user model defined and specified in `settings.py` using the `AUTH_USER_MODEL` setting. Run `makemigrations` and `migrate` if necessary.
+1.  **Set up Custom User Model:** Ensure you have a custom user model defined in `models.py` (inherit from `AbstractUser`) and specified in `settings.py` using the `AUTH_USER_MODEL` setting. Run `makemigrations` and `migrate` if necessary.
 2.  **Create `signals.py`:** In your application's directory (e.g., `core`), create a file named `signals.py`.
 3.  **Import necessary modules:**
     ```python
