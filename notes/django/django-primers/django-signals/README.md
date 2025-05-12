@@ -121,10 +121,6 @@ This example uses the `post_delete` signal to clean up files associated with a m
 6.  **Define the receiver function:** Use the `@receiver` decorator for the `post_delete` signal and the User model sender. The function accepts `sender`, `instance`, and `**kwargs`. Implement logic to check if the instance has a file in the CV field and if that file exists on the filesystem, then remove it using `os.remove()`.
 
     ```python
-    # core/signals.py
-
-    # ... (previous post_save signal) ...
-
     @receiver(post_delete, sender=User) # Connects to post_delete signal for the User model
     def delete_associated_file(sender, instance, **kwargs): # Accepts standard arguments, including instance
         """
