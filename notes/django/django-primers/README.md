@@ -6,11 +6,10 @@
 - [Context Managers](./context-managers.md)
 - [Custom Management Commands](./custom-management-commands.md)
 - [Media Files](./media_files.md)
+- [Django Signals](./django-signals/)
 
 **Pending**
 
-- Signals
-  - [Django Signals - Introduction!](https://youtu.be/8p4M-7VXhAU?si=NawN_iJGIS5Koc14)
 - Mixins
   - [Python Django Tutorial #6: Django Class Based Views (CBV), Django Mixins | Django blog project](https://youtu.be/bjuS1ryMOmw?si=o0Y7wlpmBIIRv3d4)
 - Middlewares
