@@ -96,10 +96,7 @@ This example uses the `post_delete` signal to clean up files associated with a m
     from django.contrib.auth.models import AbstractUser # Assuming you inherit AbstractUser
 
     class User(AbstractUser):
-        # ... other fields ...
         cv = models.FileField(upload_to='cvs/', null=True, blank=True) # Add the FileField
-
-        # ... other methods ...
     ```
 
 2.  **Run Migrations:** Stop the server and run `python manage.py makemigrations` and `python manage.py migrate` to apply the model changes to the database.
@@ -107,12 +104,8 @@ This example uses the `post_delete` signal to clean up files associated with a m
 
     ```python
     # settings.py
-    import os # Import os module
-
-    BASE_DIR = Path(__file__).resolve().parent.parent # Assuming BASE_DIR is defined
-
-    MEDIA_ROOT = os.path.join(BASE_DIR, 'media') # Define the root directory for media files
-    MEDIA_URL = '/media/' # Define the URL path for media files
+    MEDIA_ROOT = BASE_DIR / "media" # Define the root directory for media files
+    MEDIA_URL = "/media/" # Define the URL path for media files
     ```
 
 4.  **Create Media Directory:** Manually create the `media` directory at the root of your project if it doesn't exist. The `upload_to` path (`cvs/` in this case) will be created automatically under `MEDIA_ROOT` when a file is uploaded.
