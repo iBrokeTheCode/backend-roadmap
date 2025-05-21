@@ -23,3 +23,5 @@
   - [Re-Write Django tests with pytest | pytest fixtures & test functions](https://youtu.be/pdatgYDXmSE?si=y3oTmXJ3Ir9t_zyY)
 - Static Files
   - [Whitenoise for Django Static Assets - Overview!](https://youtu.be/QZTk8txo6x0?si=8mMgUhDnmPwfNhxy)
+- [Custom Managers](https://docs.djangoproject.com/en/5.2/topics/db/managers/) - [Reference](https://youtu.be/3qViDQ6SUC8?si=nLvDTRph1OW-b7A5)
+- [Re-write Django tests with pytest](https://www.youtube.com/watch?v=pdatgYDXmSE)
