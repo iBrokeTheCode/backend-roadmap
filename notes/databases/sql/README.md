@@ -14,6 +14,7 @@
 10. [`GROUP BY`](./notes/10_group_by.md)
 11. [`HAVING`](./notes/11_having.md)
 12. [`IN`, `NOT IN`, `DISTINCT`](./notes/12_in_not_in_distinct.md)
+13. [`LIKE`](./notes/13_like.md)
 
 ## Related Resources
 
