@@ -12,6 +12,7 @@
 8. [`ORDER BY`](./notes/08_order_by.md)
 9. [`SUM`, `COUNT`, `AVG`, `MIN`, `MAX`](./notes/09_aggregate_functions.md)
 10. [`GROUP BY`](./notes/10_group_by.md)
+11. [`HAVING`](./notes/11_having.md)
 
 ## Related Resources
 
