@@ -8,7 +8,8 @@
 4. [SQL Introduction](./notes/04_sql_intro.md)
 5. [`SELECT`](./notes/05_select.md)
 6. [`WHERE`](./notes/06_select_where.md)
-7. [Join with `WHERE`](./notes/07_union_where.md)
+7. [Join with `WHERE`](./notes/07_join_with_select.md)
+8. [`ORDER BY`](./notes/08_order_by.md)
 
 ## Related Resources
 
