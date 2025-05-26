@@ -11,6 +11,7 @@
 7. [Join with `WHERE`](./notes/07_join_with_select.md)
 8. [`ORDER BY`](./notes/08_order_by.md)
 9. [`SUM`, `COUNT`, `AVG`, `MIN`, `MAX`](./notes/09_aggregate_functions.md)
+10. [`GROUP BY`](./notes/10_group_by.md)
 
 ## Related Resources
 
