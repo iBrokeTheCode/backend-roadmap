@@ -84,16 +84,40 @@ MySQL provides functions to extract parts of a date or time, allowing for more f
 - **`MONTH()`**: Extracts the month from a date.
 - **`DAY()`**: Extracts the day from a date.
 - **Example**: To find sales only from the year 2018:
+
   ```sql
   SELECT *
   FROM sales
   WHERE YEAR(sales_date) = 2018;
   ```
+
+  **Alternative for SQLite**
+
+  ```sql
+  SELECT *
+  FROM ventas
+  where strftime('%Y', Ventas_Fecha) == '2024';
+
+  -- To retrieve year only
+  SELECT strftime('%Y', v.Ventas_Fecha) AS year
+  FROM ventas v
+  WHERE year == '2024';
+  ```
+
 - **Example**: To find sales from months greater than January:
+
   ```sql
   SELECT *
   FROM sales
   WHERE MONTH(sales_date) > 1;
+  ```
+
+  **Alternative for SQLite**
+
+  ```sql
+  SELECT *
+  FROM ventas
+  WHERE strftime('%m', ventas.Ventas_Fecha) > '01';
   ```
 
 ## Using the `BETWEEN` Operator
