@@ -2,8 +2,13 @@
 
 ## Related Resources
 
+**Helpers**
+
 - [Suggested Roadmap](./notes/roadmap/README.md)
 - [Prompts](./notes/prompts/)
+
+**Core**
+
 - [Python Notes](https://github.com/iBrokeTheCode/python-roadmap)
 - [Git Notes](https://github.com/ibrokethecode/git-tutorial)
 - [Django Notes](./notes/django/README.md)
@@ -11,6 +16,7 @@
 - [Django REST Framework](https://github.com/iBrokeTheCode/django-rest-framework)
 - [FastAPI Notes](https://github.com/iBrokeTheCode/fastapi-course)
 - [Docker Notes](https://github.com/iBrokeTheCode/backend-roadmap/blob/main/notes/containers/docker/README.md)
+- [SQL Notes](https://github.com/iBrokeTheCode/backend-roadmap/tree/main/notes/databases/sql/)
 
 ## Roadmap
 
@@ -70,7 +76,7 @@
 
 4. **Databases**
 
-   4.1. **Relational & SQL Primer** [Resource](https://youtu.be/OT1RErkfLNQ?si=yQWFLMcdgM9cHiIq)  
+   4.1. **Relational & SQL Primer**
    &nbsp;&nbsp;- CRUD operations  
    &nbsp;&nbsp;- Joins, aggregations, subqueries
 
