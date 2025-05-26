@@ -5,6 +5,7 @@
 1. [Data Types](./notes/01_datatypes.md)
 2. [Indexes](./notes/02_indexes.md)
 3. [Normalization](./notes/03_normalization.md)
+4. [SQL Introduction](./notes/04_sql_intro.md)
 
 ## Related Resources
 
