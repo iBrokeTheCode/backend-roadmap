@@ -75,7 +75,7 @@ ORDER BY
 Alternative version for SQLite:
 
 ```sql
-SELECT strftime('%Y', Ventas_Fecha) AS Year, strftime('%m', Ventas_Fecha) as Month, count(*)
+SELECT strftime('%Y', Ventas_Fecha) AS Year, strftime('%m', Ventas_Fecha) AS Month, sum(Ventas_Total) AS Total
 FROM ventas
 WHERE strftime('%Y', Ventas_Fecha) = '2024'
 GROUP BY Year, Month
