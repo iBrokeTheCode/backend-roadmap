@@ -16,6 +16,7 @@
 12. [`IN`, `NOT IN`, `DISTINCT`](./notes/12_in_not_in_distinct.md)
 13. [`LIKE`](./notes/13_like.md)
 14. [`JOIN`](./notes/14_join.md)
+15. [`LEFT JOIN`, `RIGHT JOIN`](./notes/15_left_right_join.md)
 
 ## Related Resources
 
