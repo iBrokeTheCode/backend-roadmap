@@ -12,6 +12,7 @@ The `IF()` function evaluates a condition and returns one value if the condition
 
 - **Syntax**: `IF(condition, value_if_true, value_if_false)`
 - **Example**: Displaying "Enabled" or "Disabled" based on a product's status:
+
   ```sql
   SELECT
       P.prod_ID,
@@ -20,6 +21,17 @@ The `IF()` function evaluates a condition and returns one value if the condition
   FROM
       products P;
   ```
+
+  Alternative version for SQLite (using `IIF()` instead of `IF()`):
+
+  ```sql
+  SELECT
+    Prod_Id,
+    Prod_Descripcion,
+    IIF(Prod_Status = 1, 'Enabled', 'Disabled') AS Product_State
+  FROM productos;
+  ```
+
 - **Limitation**: `IF()` can only handle two outcomes (true or false). For multiple conditions, `CASE` is preferred.
 
 ### `CASE` Statement
@@ -101,6 +113,7 @@ The `SUBSTRING()` function extracts a portion (substring) from a given string.
   - `start_position`: The starting position for extraction (1 for the first character).
   - `length`: The number of characters to extract.
 - **Example**: Using `SUBSTRING()` within a `CASE` statement to check the first character of a product description:
+
   ```sql
   SELECT
       P.prod_ID,
@@ -114,29 +127,43 @@ The `SUBSTRING()` function extracts a portion (substring) from a given string.
       products P;
   ```
 
+  Alternative version for SQLite:
+
+  ```sql
+  SELECT
+    Prod_Id,
+    Prod_Descripcion,
+    CASE substr(Prod_Descripcion, 1, 1)
+    WHEN 'A' THEN 'Starts with A'
+    WHEN 'B' THEN 'Starts with B'
+    ELSE 'N/A'
+    END AS Product_Start_With
+  FROM productos;
+  ```
+
 ## 4. Date/Time and System Functions (No `FROM` Clause Needed)
 
 Many functions can be executed directly in a `SELECT` statement without needing a `FROM` clause, as they retrieve system-level or calculated values.
 
-- **`CURRENT_DATE()`**: Returns the current date.
+- **`CURRENT_DATE`**: Returns the current date.
   ```sql
-  SELECT CURRENT_DATE() AS today;
+  SELECT CURRENT_DATE AS today;
   ```
-- **`CURRENT_TIME()`**: Returns the current time.
+- **`CURRENT_TIME`**: Returns the current time.
   ```sql
-  SELECT CURRENT_TIME() AS now_time;
+  SELECT CURRENT_TIME AS now_time;
   ```
-- **`CURRENT_TIMESTAMP()`**: Returns the current date and time.
+- **`CURRENT_TIMESTAMP`**: Returns the current date and time.
   ```sql
-  SELECT CURRENT_TIMESTAMP() AS current_datetime;
+  SELECT CURRENT_TIMESTAMP AS current_datetime;
   ```
-- **`DATABASE()`**: Returns the name of the currently selected database.
+- **`DATABASE`**: Returns the name of the currently selected database.
   ```sql
-  SELECT DATABASE() AS current_db;
+  SELECT DATABASE AS current_db;
   ```
-- **`CURRENT_USER()`**: Returns the username and host of the current MySQL user.
+- **`CURRENT_USER`**: Returns the username and host of the current MySQL user.
   ```sql
-  SELECT CURRENT_USER() AS logged_in_user;
+  SELECT CURRENT_USER AS logged_in_user;
   ```
 - **`DATEDIFF(date1, date2)`**: Calculates the difference in days between two dates. `date1` should be the later date to get a positive result.
   ```sql
@@ -147,11 +174,11 @@ Many functions can be executed directly in a `SELECT` statement without needing 
     SELECT
         V.invoice_number,
         V.sale_date,
-        DATEDIFF(CURRENT_DATE(), V.sale_date) AS days_since_sale
+        DATEDIFF(CURRENT_DATE, V.sale_date) AS days_since_sale
     FROM
         sales V;
     ```
 - **`DAYOFWEEK(date)`**: Returns the weekday index for a date (1 = Sunday, 2 = Monday, ..., 7 = Saturday).
   ```sql
-  SELECT DAYOFWEEK(CURRENT_DATE()) AS weekday_number;
+  SELECT DAYOFWEEK(CURRENT_DATE) AS weekday_number;
   ```
