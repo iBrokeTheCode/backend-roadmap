@@ -79,6 +79,7 @@ The `CAST()` function converts a value from one data type to another.
     SELECT P.prod_ID, P.prod_description, CHAR_LENGTH(P.prod_description) AS description_length
     FROM products P;
     ```
+    _For SQLite, use `LENGTH`_
 
 - **`COMPRESS()`**: Compresses a string.
 
