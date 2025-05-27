@@ -22,6 +22,7 @@
 18. [`INSERT`](./notes/18_insert.md)
 19. [`UPDATE`](./notes/19_update.md)
 20. [`DELETE`](./notes/20_delete.md)
+21. [Subqueries](./notes/21_subqueries.md)
 
 ## Related Resources
 
