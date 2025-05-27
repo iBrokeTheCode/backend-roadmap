@@ -21,6 +21,7 @@
 17. [Functions - Part 2](./notes/17_functions_part_2.md)
 18. [`INSERT`](./notes/18_insert.md)
 19. [`UPDATE`](./notes/19_update.md)
+20. [`DELETE`](./notes/20_delete.md)
 
 ## Related Resources
 
