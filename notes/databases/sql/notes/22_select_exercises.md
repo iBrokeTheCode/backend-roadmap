@@ -118,7 +118,7 @@ JOIN proveedores ON Prov_Id = Prod_ProvId
 WHERE concat(Prod_Color, ' ', Prod_Descripcion, ' ', Prov_Nombre) LIKE '%RO%'
 ```
 
-12. Retrieve all products whose description contains the word 'AS' and has sales.
+12. Retrieve all products whose description contains the word 'AS' and has sales. (+3 possible solutions)
 
 ```sql
 SELECT DISTINCT Prod_Id, Prod_Descripcion
@@ -142,4 +142,48 @@ ORDER BY Prod_Id
 SELECT Prod_Id, Prod_Descripcion
 FROM productos
 WHERE Prod_Id IN (SELECT DISTINCT VD_ProdId FROM ventas_detalle) AND Prod_Descripcion LIKE '%AS%'
+```
+
+---
+
+13. Retrieve the quantity of sold products
+
+```sql
+SELECT SUM(VD_Cantidad) AS Total
+FROM ventas_detalle;
+```
+
+14. Retrieve the quantity of different sold products
+
+```sql
+SELECT COUNT(DISTINCT(VD_ProdId)) AS Total
+FROM ventas_detalle;
+```
+
+15. Retrieve the total amount of the products that were sold between 2024-02-11 and 2024-12-12 and whose supplier is between 7 and 28
+
+```sql
+SELECT SUM(Ventas_Total) AS Total
+FROM ventas
+JOIN ventas_detalle ON VD_VentasId = Ventas_Id
+JOIN productos ON Prod_Id = VD_ProdId
+WHERE
+   (Ventas_Fecha BETWEEN '2024-02-11' AND '2024-12-12')
+   AND
+   Prod_ProvId BETWEEN 7 AND 28
+```
+
+16. Retrieve the invoice number that has the highest total amount and has sold the product 287 (+2 possible solutions)
+
+```sql
+SELECT Ventas_NroFactura, MAX(Ventas_Total) AS 'Greater'
+FROM ventas
+JOIN ventas_detalle ON VD_VentasId = Ventas_Id
+WHERE VD_ProdId = 287
+```
+
+```sql
+SELECT Ventas_NroFactura, MAX(Ventas_Total) AS 'Greater'
+FROM ventas
+JOIN ventas_detalle ON VD_VentasId = Ventas_Id AND VD_ProdId = 287
 ```
