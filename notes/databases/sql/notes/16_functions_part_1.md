@@ -145,25 +145,25 @@ The `SUBSTRING()` function extracts a portion (substring) from a given string.
 
 Many functions can be executed directly in a `SELECT` statement without needing a `FROM` clause, as they retrieve system-level or calculated values.
 
-- **`CURRENT_DATE`**: Returns the current date.
+- **`CURRENT_DATE()`**: Returns the current date.
   ```sql
-  SELECT CURRENT_DATE AS today;
+  SELECT CURRENT_DATE() AS today;
   ```
-- **`CURRENT_TIME`**: Returns the current time.
+- **`CURRENT_TIME()`**: Returns the current time.
   ```sql
-  SELECT CURRENT_TIME AS now_time;
+  SELECT CURRENT_TIME() AS now_time;
   ```
-- **`CURRENT_TIMESTAMP`**: Returns the current date and time.
+- **`CURRENT_TIMESTAMP()`**: Returns the current date and time.
   ```sql
-  SELECT CURRENT_TIMESTAMP AS current_datetime;
+  SELECT CURRENT_TIMESTAMP() AS current_datetime;
   ```
-- **`DATABASE`**: Returns the name of the currently selected database.
+- **`DATABASE()`**: Returns the name of the currently selected database.
   ```sql
-  SELECT DATABASE AS current_db;
+  SELECT DATABASE() AS current_db;
   ```
-- **`CURRENT_USER`**: Returns the username and host of the current MySQL user.
+- **`CURRENT_USER()`**: Returns the username and host of the current MySQL user.
   ```sql
-  SELECT CURRENT_USER AS logged_in_user;
+  SELECT CURRENT_USER() AS logged_in_user;
   ```
 - **`DATEDIFF(date1, date2)`**: Calculates the difference in days between two dates. `date1` should be the later date to get a positive result.
   ```sql
@@ -174,11 +174,11 @@ Many functions can be executed directly in a `SELECT` statement without needing 
     SELECT
         V.invoice_number,
         V.sale_date,
-        DATEDIFF(CURRENT_DATE, V.sale_date) AS days_since_sale
+        DATEDIFF(CURRENT_DATE(), V.sale_date) AS days_since_sale
     FROM
         sales V;
     ```
 - **`DAYOFWEEK(date)`**: Returns the weekday index for a date (1 = Sunday, 2 = Monday, ..., 7 = Saturday).
   ```sql
-  SELECT DAYOFWEEK(CURRENT_DATE) AS weekday_number;
+  SELECT DAYOFWEEK(CURRENT_DATE()) AS weekday_number;
   ```
