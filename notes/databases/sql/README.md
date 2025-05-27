@@ -19,6 +19,7 @@
 15. [`LEFT JOIN`, `RIGHT JOIN`](./notes/15_left_right_join.md)
 16. [Functions - Part 1](./notes/16_functions_part_1.md)
 17. [Functions - Part 2](./notes/17_functions_part_2.md)
+18. [`INSERT`](./notes/18_insert.md)
 
 ## Related Resources
 
