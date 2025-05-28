@@ -2,6 +2,8 @@
 
 ## Table of Contents
 
+**Course 01**
+
 1. [Data Types](./notes/course_01/01_datatypes.md)
 2. [Indexes](./notes/course_01/02_indexes.md)
 3. [Normalization](./notes/course_01/03_normalization.md)
@@ -25,6 +27,11 @@
 21. [Subqueries](./notes/course_01/21_subqueries.md)
 22. [`SELECT` Exercises](./notes/course_01/22_select_exercises.md)
 
+**Course 02**
+
+1. [Primary Key](./notes/course_02/01_primary_key.md)
+
 ## Related Resources
 
 - [Learn SQL Beginner to Advanced in Under 4 Hours](https://youtu.be/OT1RErkfLNQ?si=yQWFLMcdgM9cHiIq)
+- [One Compiler](https://onecompiler.com/mysql) - Run SQL queries in the browser
