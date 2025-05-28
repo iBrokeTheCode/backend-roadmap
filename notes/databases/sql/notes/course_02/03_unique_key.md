@@ -90,6 +90,20 @@ Indexes in SQL are special lookup tables that the database search engine can use
 
 In MySQL, when you define a **`UNIQUE` constraint** on a column, the database **automatically creates an index** on that column. This index is what enforces the uniqueness. Because of this close relationship, removing a `UNIQUE` constraint involves dropping its underlying index.
 
+### Creating a `INDEX`
+
+To create an index for a column, you use the `CREATE INDEX` statement with the following format:
+
+```sql
+CREATE INDEX index_name ON table_name (column_name);
+```
+
+Here's an example:
+
+```sql
+CREATE INDEX idx_email ON Empleados(Email);
+```
+
 ### Removing a `UNIQUE` Constraint
 
 To remove a `UNIQUE` constraint from a table, you use the `ALTER TABLE` statement in conjunction with `DROP INDEX`.
