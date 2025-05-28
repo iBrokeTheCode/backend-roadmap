@@ -30,6 +30,7 @@
 **Course 02**
 
 1. [Primary Key](./notes/course_02/01_primary_key.md)
+2. [Foreign Key](./notes/course_02/02_foreign_key.md)
 
 ## Related Resources
 
