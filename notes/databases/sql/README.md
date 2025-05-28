@@ -31,10 +31,11 @@
 
 **Restrictions**
 
-1. [Primary Key](./notes/course_02/01_primary_key.md)
-2. [Foreign Key](./notes/course_02/02_foreign_key.md)
-3. [Unique Key](./notes/course_02/03_unique_key.md)
+1. [`PRIMARY` Key](./notes/course_02/01_primary_key.md)
+2. [`FOREIGN` Key](./notes/course_02/02_foreign_key.md)
+3. [`UNIQUE` Key](./notes/course_02/03_unique_key.md)
 4. [Adding columns and records](./notes/course_02/04_adding_columns_and_records.md)
+5. [`DEFAULT` constraint](./notes/course_02/05_default_constraint.md)
 
 ## Related Resources
 
