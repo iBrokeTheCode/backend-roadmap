@@ -2,7 +2,7 @@
 
 ## Table of Contents
 
-**Course 01**
+### Course 01
 
 1. [Data Types](./notes/course_01/01_datatypes.md)
 2. [Indexes](./notes/course_01/02_indexes.md)
@@ -27,11 +27,14 @@
 21. [Subqueries](./notes/course_01/21_subqueries.md)
 22. [`SELECT` Exercises](./notes/course_01/22_select_exercises.md)
 
-**Course 02**
+### Course 02
+
+**Restrictions**
 
 1. [Primary Key](./notes/course_02/01_primary_key.md)
 2. [Foreign Key](./notes/course_02/02_foreign_key.md)
 3. [Unique Key](./notes/course_02/03_unique_key.md)
+4. [Adding columns and records](./notes/course_02/04_adding_columns_and_records.md)
 
 ## Related Resources
 
