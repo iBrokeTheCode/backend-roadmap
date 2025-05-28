@@ -31,6 +31,7 @@
 
 1. [Primary Key](./notes/course_02/01_primary_key.md)
 2. [Foreign Key](./notes/course_02/02_foreign_key.md)
+3. [Unique Key](./notes/course_02/03_unique_key.md)
 
 ## Related Resources
 
